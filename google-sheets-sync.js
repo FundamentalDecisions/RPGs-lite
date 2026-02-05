@@ -35,7 +35,7 @@ async function processQueue() {
     const response = await fetch(WEB_APP_URL, {
       method: 'POST',
       body: JSON.stringify(payload),
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
     });
 
     const data = await response.json();
@@ -119,11 +119,13 @@ window.addEventListener('beforeunload', () => {
   if (queue.length > 0) {
     navigator.sendBeacon(
       WEB_APP_URL,
-      JSON.stringify({
-        mode: 'UNLOAD_FLUSH',
-        sessionId,
-        queueCount: queue.length,
-      })
+      new Blob([
+        JSON.stringify({
+          mode: 'UNLOAD_FLUSH',
+          sessionId,
+          queueCount: queue.length,
+        }),
+      ], { type: 'text/plain;charset=utf-8' })
     );
   }
 });
