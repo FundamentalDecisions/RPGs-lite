@@ -1220,6 +1220,15 @@
 
       // ==================== STORY LOADING ====================
 
+
+      const STORY_UID_ALIASES = {
+        'DRPG3-underperforming-team': 'DRPG3-Underperforming-Team',
+      };
+
+      function resolveStoryUid(uid) {
+        return STORY_UID_ALIASES[uid] || uid;
+      }
+      
       async function loadAvailableStories() {
         try {
           // Load manifest
@@ -1229,7 +1238,7 @@
           // Load each story
           const storyPromises = manifest.stories.map(async (uid) => {
             try {
-              const response = await fetch(`stories/${uid}.json`);
+              const response = await fetch(`stories/${resolveStoryUid(uid)}.json`);
               return await response.json();
             } catch (error) {
               console.error(`Failed to load story ${uid}:`, error);
