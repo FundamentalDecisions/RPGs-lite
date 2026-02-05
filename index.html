@@ -1374,6 +1374,7 @@
           rpgUid: currentStory.metadata.uid,
           rpgTitle: currentStory.metadata.title,
           timestamp: Date.now(),
+          location: Intl.DateTimeFormat().resolvedOptions().timeZone || '',
         });
 
         currentSceneIndex = 0;
@@ -1711,7 +1712,12 @@
           scenesCompleted: choiceHistory.length,
           choice: {
             scene: currentSceneIndex + 1,
+            sceneId: scenes[currentSceneIndex]?.id || '',
+            sceneTitle: scenes[currentSceneIndex]?.title || '',
+            sceneTag: scenes[currentSceneIndex]?.tag || '',
             code: pendingOption.code,
+            choiceMain: pendingOption.main,
+            choiceDescription: pendingOption.desc,
             elaboration: elaboration,
           },
           score: { ...score },
@@ -1901,6 +1907,16 @@
 
       function downloadReportAsJSON() {
         const reportData = compileReportDataForJSON();
+
+        // Send optional download-form fields to Sheets only when provided
+        syncSessionComplete({
+          sourceCode: reportData.sourceCode,
+          questionsAfterRound: reportData.questionsAfterRound,
+          workChallenges: reportData.workChallenges,
+          scenesCompleted: choiceHistory.length,
+          completedAt: Date.now(),
+        });
+        
         const jsonString = JSON.stringify(reportData, null, 2);
         const blob = new Blob([jsonString], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
