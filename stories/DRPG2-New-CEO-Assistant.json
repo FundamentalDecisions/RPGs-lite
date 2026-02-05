@@ -1,0 +1,358 @@
+{
+  "metadata": {
+    "uid": "DRPG2-New-CEO-Assistant",
+    "title": "The New CEO’s Assistant",
+    "subtitle": "Lite",
+    "description": "You support a brilliant but chaotic CEO whose ideas move faster than the organisation can follow. Your role sits in the backstage space between strategy, loyalty, boundaries, and emotional navigation.",
+    "hint": "Tests your Strategy mindset, Boundary strength, Loyalty style, and Information Processing / People-reading",
+    "difficulty": "Medium",
+    "duration": "5-7 minutes",
+    "color": "#f472b6"
+  },
+  "dimensions": [
+    {
+      "key": "strategy",
+      "label": "Strategic mindset",
+      "description": "How you structure chaos, prioritise, and make decisions under pressure",
+      "maxValue": 15
+    },
+    {
+      "key": "boundaries",
+      "label": "Boundary mindset",
+      "description": "How you protect your time, energy, and role clarity",
+      "maxValue": 15
+    },
+    {
+      "key": "loyalty",
+      "label": "Loyalty mindset",
+      "description": "How you balance commitment to CEO, company, and self",
+      "maxValue": 12
+    },
+    {
+      "key": "info",
+      "label": "Information & People Reading",
+      "description": "How you interpret signals, manage emotions, and navigate politics",
+      "maxValue": 15
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene1",
+      "label": "Scene 1",
+      "title": "The 5:12 AM Message",
+      "tag": "First reaction",
+      "body": "Your day starts with a 5:12 AM voice note from the CEO: <span class=\"highlight\">“I had 14 ideas overnight. Sort them. Also schedule a board update, check product metrics, and remind me to talk to Legal.”</span><br><br>No priorities. No structure. Just pure chaos.",
+      "tip": "Your first move reveals your relationship with ambiguity.",
+      "options": [
+        {
+          "code": "1A",
+          "label": "A",
+          "main": "Create your own priority list.",
+          "desc": "You stabilise chaos by building structure.",
+          "deltas": { "strategy": 3, "boundaries": 1, "loyalty": 1, "info": 1 }
+        },
+        {
+          "code": "1B",
+          "label": "B",
+          "main": "Ask the CEO which task comes first.",
+          "desc": "You seek clarity before acting.",
+          "deltas": { "strategy": 1, "boundaries": 2, "loyalty": 1, "info": 1 }
+        },
+        {
+          "code": "1C",
+          "label": "C",
+          "main": "Forward the note to team leads for input.",
+          "desc": "You gather context before structuring.",
+          "deltas": { "strategy": 1, "boundaries": 0, "loyalty": 1, "info": 3 }
+        },
+        {
+          "code": "1D",
+          "label": "D",
+          "main": "Try to do everything at once.",
+          "desc": "You absorb chaos instead of shaping it.",
+          "deltas": { "strategy": -2, "boundaries": -2, "loyalty": 2, "info": -1 }
+        }
+      ]
+    },
+    {
+      "id": "scene2",
+      "label": "Scene 2",
+      "title": "Everyone Wants Access",
+      "tag": "Gatekeeping",
+      "body": "By 9 AM, six executives message you: <span class=\"highlight\">“I need 5 minutes.” “Urgent!” “Put me into the CEO’s calendar.”</span><br><br>You are the gatekeeper to a CEO with no time.",
+      "tip": "Boundaries and politics collide here.",
+      "options": [
+        {
+          "code": "2A",
+          "label": "A",
+          "main": "Block everyone and protect CEO’s deep work.",
+          "desc": "You act as a strong shield.",
+          "deltas": { "strategy": 2, "boundaries": 3, "loyalty": 2, "info": 0 }
+        },
+        {
+          "code": "2B",
+          "label": "B",
+          "main": "Filter based on strategic impact.",
+          "desc": "You balance access with priorities.",
+          "deltas": { "strategy": 3, "boundaries": 2, "loyalty": 1, "info": 1 }
+        },
+        {
+          "code": "2C",
+          "label": "C",
+          "main": "Let everyone in to avoid conflict.",
+          "desc": "You sacrifice boundaries for harmony.",
+          "deltas": { "strategy": -1, "boundaries": -2, "loyalty": 1, "info": 3 }
+        },
+        {
+          "code": "2D",
+          "label": "D",
+          "main": "Ask the CEO who gets access.",
+          "desc": "You defer decisions upward.",
+          "deltas": { "strategy": 1, "boundaries": 1, "loyalty": 2, "info": 1 }
+        }
+      ]
+    },
+    {
+      "id": "scene3",
+      "label": "Scene 3",
+      "title": "The Bad News File",
+      "tag": "Handling truth",
+      "body": "A product manager messages you quietly: <span class=\"highlight\">“The prototype failed.”</span><br><br>You must tell the CEO, who hates hearing failure.",
+      "tip": "This choice reveals your courage and framing instincts.",
+      "options": [
+        {
+          "code": "3A",
+          "label": "A",
+          "main": "Tell the CEO directly and clearly.",
+          "desc": "You deliver truth without delay.",
+          "deltas": { "strategy": 1, "boundaries": 0, "loyalty": 2, "info": 1 }
+        },
+        {
+          "code": "3B",
+          "label": "B",
+          "main": "Soften the message.",
+          "desc": "You prioritise tone over accuracy.",
+          "deltas": { "strategy": -1, "boundaries": 0, "loyalty": 1, "info": 2 }
+        },
+        {
+          "code": "3C",
+          "label": "C",
+          "main": "Present three solution paths along with the news.",
+          "desc": "You merge truth with strategic framing.",
+          "deltas": { "strategy": 3, "boundaries": 1, "loyalty": 2, "info": 2 }
+        },
+        {
+          "code": "3D",
+          "label": "D",
+          "main": "Delay telling them until later.",
+          "desc": "Avoidance for emotional safety.",
+          "deltas": { "strategy": -2, "boundaries": -1, "loyalty": -1, "info": -1 }
+        }
+      ]
+    },
+    {
+      "id": "scene4",
+      "label": "Scene 4",
+      "title": "The Political Landmine",
+      "tag": "Politics",
+      "body": "An SVP corners you in the hallway: <span class=\"highlight\">“Hey… what’s the CEO thinking about our department?”</span><br><br>Their smile feels too friendly.",
+      "tip": "This tests political awareness and boundary strength.",
+      "options": [
+        {
+          "code": "4A",
+          "label": "A",
+          "main": "\"I can’t discuss CEO plans.\"",
+          "desc": "Clear boundary, no leak.",
+          "deltas": { "strategy": 1, "boundaries": 3, "loyalty": 3, "info": 1 }
+        },
+        {
+          "code": "4B",
+          "label": "B",
+          "main": "Give a neutral, surface-level answer.",
+          "desc": "Non-committal diplomacy.",
+          "deltas": { "strategy": 1, "boundaries": 2, "loyalty": 1, "info": 2 }
+        },
+        {
+          "code": "4C",
+          "label": "C",
+          "main": "Ask why they want the information.",
+          "desc": "You take control of the conversation.",
+          "deltas": { "strategy": 2, "boundaries": 2, "loyalty": 1, "info": 3 }
+        },
+        {
+          "code": "4D",
+          "label": "D",
+          "main": "Share details to gain political favour.",
+          "desc": "Short-term gain, long-term danger.",
+          "deltas": { "strategy": -2, "boundaries": -3, "loyalty": -2, "info": -1 }
+        }
+      ]
+    },
+    {
+      "id": "scene5",
+      "label": "Scene 5",
+      "title": "The Emotional Storm",
+      "tag": "Emotional navigation",
+      "body": "The CEO storms into your workspace: <span class=\"highlight\">“Why is everything slow today? Am I the only one who cares?!”</span><br><br>You can feel the stress radiating.",
+      "tip": "Your response reveals emotional calibration.",
+      "options": [
+        {
+          "code": "5A",
+          "label": "A",
+          "main": "Mirror calm and create structure.",
+          "desc": "You stabilise the room.",
+          "deltas": { "strategy": 2, "boundaries": 1, "loyalty": 2, "info": 3 }
+        },
+        {
+          "code": "5B",
+          "label": "B",
+          "main": "Apologise and take responsibility.",
+          "desc": "You absorb blame to cool the fire.",
+          "deltas": { "strategy": -1, "boundaries": -1, "loyalty": 3, "info": -1 }
+        },
+        {
+          "code": "5C",
+          "label": "C",
+          "main": "\"What’s frustrating you most right now?\"",
+          "desc": "You help them unpack emotion.",
+          "deltas": { "strategy": 1, "boundaries": 1, "loyalty": 1, "info": 3 }
+        },
+        {
+          "code": "5D",
+          "label": "D",
+          "main": "Push them back to focus.",
+          "desc": "You cut through the emotional noise.",
+          "deltas": { "strategy": 3, "boundaries": 2, "loyalty": 1, "info": 1 }
+        }
+      ]
+    },
+    {
+      "id": "scene6",
+      "label": "Scene 6",
+      "title": "Shadow You Arrives",
+      "tag": "Self-confrontation",
+      "body": "A glitch flashes. A calmer, darker version of you appears: <span class=\"highlight\">“You’re carrying the CEO. But who is carrying you?”</span>",
+      "tip": "Your answer reveals your identity anchor.",
+      "options": [
+        {
+          "code": "6A",
+          "label": "A",
+          "main": "\"I exist to support them.\"",
+          "desc": "Full devotion, limited boundaries.",
+          "deltas": { "strategy": 0, "boundaries": -2, "loyalty": 4, "info": -1 }
+        },
+        {
+          "code": "6B",
+          "label": "B",
+          "main": "\"I need boundaries.\"",
+          "desc": "You choose sustainability.",
+          "deltas": { "strategy": 1, "boundaries": 4, "loyalty": 1, "info": 2 }
+        },
+        {
+          "code": "6C",
+          "label": "C",
+          "main": "\"I must think like a strategist, not a helper.\"",
+          "desc": "Identity shift toward higher ground.",
+          "deltas": { "strategy": 4, "boundaries": 1, "loyalty": 1, "info": 3 }
+        },
+        {
+          "code": "6D",
+          "label": "D",
+          "main": "\"I’m overwhelmed.\"",
+          "desc": "Honesty under strain.",
+          "deltas": { "strategy": -2, "boundaries": -1, "loyalty": 0, "info": -2 }
+        }
+      ]
+    },
+    {
+      "id": "scene7",
+      "label": "Scene 7",
+      "title": "The Backstage Doors",
+      "tag": "Future identity",
+      "body": "At the end of the corridor, three glowing doors appear:<br><br><strong>Door 1 — The Guardian</strong><br><strong>Door 2 — The Strategic Operator</strong><br><strong>Door 3 — The Boundary-Strong Advisor</strong>",
+      "tip": "Your final door shows who you become next.",
+      "options": [
+        {
+          "code": "7G",
+          "label": "A",
+          "main": "Enter the Guardian’s door.",
+          "desc": "You protect the CEO fiercely.",
+          "deltas": { "strategy": 1, "boundaries": 2, "loyalty": 4, "info": 1 },
+          "end": true
+        },
+        {
+          "code": "7S",
+          "label": "B",
+          "main": "Enter the Strategic Operator’s door.",
+          "desc": "You run the backstage engine.",
+          "deltas": { "strategy": 4, "boundaries": 2, "loyalty": 2, "info": 3 },
+          "end": true
+        },
+        {
+          "code": "7A",
+          "label": "C",
+          "main": "Enter the Boundary-Strong Advisor’s door.",
+          "desc": "You support with strength, not sacrifice.",
+          "deltas": { "strategy": 2, "boundaries": 4, "loyalty": 1, "info": 2 },
+          "end": true
+        }
+      ]
+    }
+  ],
+  "archetypeSystem": {
+    "archetypes": [
+      {
+        "id": "stabilizer",
+        "label": "The Stabilizer Behind the Genius",
+        "condition": "strategy >= 5 && info >= 5"
+      },
+      {
+        "id": "shield",
+        "label": "The Guardian Shield",
+        "condition": "loyalty >= 6 && boundaries >= 5"
+      },
+      {
+        "id": "operator",
+        "label": "The Strategic Operator",
+        "condition": "strategy >= 7 && info >= 6"
+      },
+      {
+        "id": "advisor",
+        "label": "The Boundary-Strong Advisor",
+        "condition": "boundaries >= 6 && loyalty < 5"
+      },
+      {
+        "id": "empath",
+        "label": "The Emotional Navigator",
+        "condition": "info >= 6 && strategy < 5"
+      },
+      {
+        "id": "generalist",
+        "label": "The Backstage Generalist",
+        "condition": "true"
+      }
+    ]
+  },
+  "growthSuggestions": [
+    {
+      "condition": "boundaries < 4 && loyalty > 5",
+      "text": "You give deeply and consistently. Strengthening boundaries will protect your sustainability."
+    },
+    {
+      "condition": "strategy < 5 && info > 6",
+      "text": "You read people and situations well. Pair this with structure to elevate influence."
+    },
+    {
+      "condition": "loyalty > 7",
+      "text": "Your loyalty is powerful — but watch for over-accommodation or burnout."
+    },
+    {
+      "condition": "info < 3",
+      "text": "Slow down and observe dynamics before acting. Political clarity strengthens decision-making."
+    },
+    {
+      "condition": "true",
+      "text": "Your mindset shows balance across backstage roles. Continue refining structure, boundaries, and strategic calm."
+    }
+  ]
+}

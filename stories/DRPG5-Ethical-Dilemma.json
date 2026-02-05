@@ -1,0 +1,358 @@
+{
+  "metadata": {
+    "uid": "DRPG5-Ethical-Dilemma",
+    "title": "The Ethical Dilemma",
+    "subtitle": "Lite",
+    "description": "You notice something questionable inside the company — mismatched numbers, hushed voices, and signals that something is wrong. You must choose whether to protect truth, harmony, the company, or yourself. Your values, courage, and judgment will be tested.",
+    "hint": "Tests Integrity mindset, Courage in judgment, Harmony preference, and Risk sensitivity",
+    "difficulty": "Medium",
+    "duration": "5-7 minutes",
+    "color": "#a78bfa"
+  },
+  "dimensions": [
+    {
+      "key": "integrity",
+      "label": "Integrity",
+      "description": "How strongly you protect truth, fairness, and ethical standards",
+      "maxValue": 15
+    },
+    {
+      "key": "courage",
+      "label": "Courage in judgment",
+      "description": "How willing you are to speak up and act despite consequences",
+      "maxValue": 15
+    },
+    {
+      "key": "harmony",
+      "label": "Harmony preference",
+      "description": "How much you prioritise peace, relationships, and group stability",
+      "maxValue": 15
+    },
+    {
+      "key": "risk",
+      "label": "Risk sensitivity",
+      "description": "How you weigh personal, professional, and organizational risk",
+      "maxValue": 15
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene1",
+      "label": "Scene 1",
+      "title": "You Notice Fraud Indicators",
+      "tag": "Initial perception",
+      "body": "The numbers don’t match.<br>Rumors circulate quietly.<br>People avoid eye contact when you walk past.<br><br>You sense something unethical unfolding — and you are now part of the awareness.",
+      "tip": "Your first instinct signals your ethical foundation.",
+      "options": [
+        {
+          "code": "1A",
+          "label": "A",
+          "main": "Report immediately.",
+          "desc": "You choose truth over hesitation.",
+          "deltas": { "integrity": 3, "courage": 3, "harmony": -2, "risk": 1 }
+        },
+        {
+          "code": "1B",
+          "label": "B",
+          "main": "Investigate quietly.",
+          "desc": "You seek clarity before escalation.",
+          "deltas": { "integrity": 2, "courage": 1, "harmony": 0, "risk": 2 }
+        },
+        {
+          "code": "1C",
+          "label": "C",
+          "main": "Ignore it.",
+          "desc": "You protect yourself and company image.",
+          "deltas": { "integrity": -3, "courage": -2, "harmony": 2, "risk": 1 }
+        },
+        {
+          "code": "1D",
+          "label": "D",
+          "main": "Ask the suspected person quietly.",
+          "desc": "You confront the source directly.",
+          "deltas": { "integrity": 2, "courage": 2, "harmony": 1, "risk": 1 }
+        }
+      ]
+    },
+    {
+      "id": "scene2",
+      "label": "Scene 2",
+      "title": "Your Findings Deepen",
+      "tag": "Evidence building",
+      "body": "You dig deeper. More inconsistencies. More whispers. Something serious may be happening — and the responsibility now feels heavier.",
+      "tip": "This choice reveals your investigative ethics.",
+      "options": [
+        {
+          "code": "2A",
+          "label": "A",
+          "main": "Collect evidence methodically.",
+          "desc": "You prepare for responsible escalation.",
+          "deltas": { "integrity": 2, "courage": 1, "harmony": 0, "risk": 2 }
+        },
+        {
+          "code": "2B",
+          "label": "B",
+          "main": "Confront the person privately.",
+          "desc": "You test truth through direct dialogue.",
+          "deltas": { "integrity": 2, "courage": 2, "harmony": 1, "risk": 1 }
+        },
+        {
+          "code": "2C",
+          "label": "C",
+          "main": "Check details with others discreetly.",
+          "desc": "You triangulate information socially.",
+          "deltas": { "integrity": 1, "courage": 1, "harmony": 2, "risk": 1 }
+        },
+        {
+          "code": "2D",
+          "label": "D",
+          "main": "Drop the investigation.",
+          "desc": "You step away to protect yourself.",
+          "deltas": { "integrity": -2, "courage": -2, "harmony": 1, "risk": 1 }
+        }
+      ]
+    },
+    {
+      "id": "scene3",
+      "label": "Scene 3",
+      "title": "Management Asks Indirectly",
+      "tag": "Ambiguous pressure",
+      "body": "A manager approaches casually: <span class=\"highlight\">“Have you heard anything unusual lately?”</span><br><br>The tone is soft — but the intent feels sharp.",
+      "tip": "Your answer tests courage under subtle pressure.",
+      "options": [
+        {
+          "code": "3A",
+          "label": "A",
+          "main": "Tell everything honestly.",
+          "desc": "You prioritise transparency.",
+          "deltas": { "integrity": 3, "courage": 3, "harmony": -1, "risk": 1 }
+        },
+        {
+          "code": "3B",
+          "label": "B",
+          "main": "Give a neutral, surface-level version.",
+          "desc": "You preserve harmony while signalling caution.",
+          "deltas": { "integrity": 1, "courage": 1, "harmony": 2, "risk": 1 }
+        },
+        {
+          "code": "3C",
+          "label": "C",
+          "main": "Ask why they’re asking.",
+          "desc": "You gather intent before revealing truth.",
+          "deltas": { "integrity": 2, "courage": 1, "harmony": 1, "risk": 2 }
+        },
+        {
+          "code": "3D",
+          "label": "D",
+          "main": "Hide the truth.",
+          "desc": "You avoid escalation entirely.",
+          "deltas": { "integrity": -3, "courage": -2, "harmony": 2, "risk": 1 }
+        }
+      ]
+    },
+    {
+      "id": "scene4",
+      "label": "Scene 4",
+      "title": "Retaliation Risk",
+      "tag": "Personal consequences",
+      "body": "You learn that others who reported similar issues faced retaliation. Fear enters the equation. What now?",
+      "tip": "This choice reveals your risk–courage balance.",
+      "options": [
+        {
+          "code": "4A",
+          "label": "A",
+          "main": "Accept the risk.",
+          "desc": "You choose principle over protection.",
+          "deltas": { "integrity": 3, "courage": 3, "harmony": -1, "risk": 3 }
+        },
+        {
+          "code": "4B",
+          "label": "B",
+          "main": "Seek protection first.",
+          "desc": "You secure safeguards before acting.",
+          "deltas": { "integrity": 1, "courage": 1, "harmony": 1, "risk": 4 }
+        },
+        {
+          "code": "4C",
+          "label": "C",
+          "main": "Delay to plan strategically.",
+          "desc": "You gain time for safer action.",
+          "deltas": { "integrity": 1, "courage": 0, "harmony": 1, "risk": 3 }
+        },
+        {
+          "code": "4D",
+          "label": "D",
+          "main": "Walk away entirely.",
+          "desc": "You protect yourself above all.",
+          "deltas": { "integrity": -2, "courage": -2, "harmony": 2, "risk": 2 }
+        }
+      ]
+    },
+    {
+      "id": "scene5",
+      "label": "Scene 5",
+      "title": "HR Says: “Stay Quiet”",
+      "tag": "Moral pressure",
+      "body": "HR pulls you aside: <span class=\"highlight\">“Stay quiet for now. We’ll handle it internally.”</span><br><br>You hear the request — but also the request *between the lines.*",
+      "tip": "This choice shows your ethical non-negotiables.",
+      "options": [
+        {
+          "code": "5A",
+          "label": "A",
+          "main": "Refuse immediately.",
+          "desc": "You reject suppression of truth.",
+          "deltas": { "integrity": 3, "courage": 3, "harmony": -1, "risk": 2 }
+        },
+        {
+          "code": "5B",
+          "label": "B",
+          "main": "Agree temporarily.",
+          "desc": "You buy time and avoid conflict.",
+          "deltas": { "integrity": 1, "courage": -1, "harmony": 2, "risk": 3 }
+        },
+        {
+          "code": "5C",
+          "label": "C",
+          "main": "Ask for a formal legal process.",
+          "desc": "You anchor ethics to procedure.",
+          "deltas": { "integrity": 2, "courage": 1, "harmony": 1, "risk": 2 }
+        },
+        {
+          "code": "5D",
+          "label": "D",
+          "main": "Fully comply.",
+          "desc": "You prioritise harmony above truth.",
+          "deltas": { "integrity": -3, "courage": -2, "harmony": 2, "risk": 1 }
+        }
+      ]
+    },
+    {
+      "id": "scene6",
+      "label": "scene6",
+      "title": "Shadow You Appears",
+      "tag": "Identity test",
+      "body": "A darker version of yourself appears: <span class=\"highlight\">“Do you fear the truth… or fear its cost?”</span><br><br>The question sinks deep.",
+      "tip": "Your philosophical choice reveals core values.",
+      "options": [
+        {
+          "code": "6A",
+          "label": "A",
+          "main": "Truth-first.",
+          "desc": "You anchor identity in moral clarity.",
+          "deltas": { "integrity": 4, "courage": 3, "harmony": -2, "risk": 2 }
+        },
+        {
+          "code": "6B",
+          "label": "B",
+          "main": "Balance truth and harmony.",
+          "desc": "You aim for fairness with diplomacy.",
+          "deltas": { "integrity": 2, "courage": 1, "harmony": 2, "risk": 2 }
+        },
+        {
+          "code": "6C",
+          "label": "C",
+          "main": "Safety-first.",
+          "desc": "You prioritise protection above impact.",
+          "deltas": { "integrity": -2, "courage": -1, "harmony": 3, "risk": 4 }
+        },
+        {
+          "code": "6D",
+          "label": "D",
+          "main": "Avoid the dilemma entirely.",
+          "desc": "You disconnect from responsibility.",
+          "deltas": { "integrity": -3, "courage": -3, "harmony": 1, "risk": 1 }
+        }
+      ]
+    },
+    {
+      "id": "scene7",
+      "label": "scene7",
+      "title": "Final Ethical Door",
+      "tag": "Moral identity",
+      "body": "Three doors form before you:<br><br><strong>COURAGE — Speak truth regardless of cost</strong><br><strong>BALANCE — Navigate integrity with diplomacy</strong><br><strong>SAFETY — Protect stability above conflict</strong>",
+      "tip": "This final door represents your ethical identity in crises.",
+      "options": [
+        {
+          "code": "7COURAGE",
+          "label": "A",
+          "main": "Choose COURAGE.",
+          "desc": "You stand for truth boldly.",
+          "deltas": { "integrity": 4, "courage": 4, "harmony": -1, "risk": 2 },
+          "end": true
+        },
+        {
+          "code": "7BAL",
+          "label": "B",
+          "main": "Choose BALANCE.",
+          "desc": "You weigh truth with diplomacy.",
+          "deltas": { "integrity": 2, "courage": 2, "harmony": 2, "risk": 2 },
+          "end": true
+        },
+        {
+          "code": "7SAFE",
+          "label": "C",
+          "main": "Choose SAFETY.",
+          "desc": "You choose harmony over disruption.",
+          "deltas": { "integrity": -1, "courage": -1, "harmony": 3, "risk": 4 },
+          "end": true
+        }
+      ]
+    }
+  ],
+  "archetypeSystem": {
+    "archetypes": [
+      {
+        "id": "truthGuardian",
+        "label": "The Truth Guardian",
+        "condition": "integrity >= 6 && courage >= 6"
+      },
+      {
+        "id": "ethicalBalancer",
+        "label": "The Ethical Balancer",
+        "condition": "integrity >= 4 && harmony >= 4 && courage >= 2"
+      },
+      {
+        "id": "protector",
+        "label": "The Risk-sensitive Protector",
+        "condition": "risk >= 6 && harmony >= 5"
+      },
+      {
+        "id": "diplomat",
+        "label": "The Harmonious Diplomat",
+        "condition": "harmony >= 6 && integrity < 4"
+      },
+      {
+        "id": "avoider",
+        "label": "The Conflict Avoider",
+        "condition": "courage < 2 && integrity < 2"
+      },
+      {
+        "id": "generalist",
+        "label": "The Ethical Generalist",
+        "condition": "true"
+      }
+    ]
+  },
+  "growthSuggestions": [
+    {
+      "condition": "courage < 3 && integrity > 4",
+      "text": "Your values are strong, but you hesitate in conflict. Strengthen courageous communication."
+    },
+    {
+      "condition": "harmony > 6 && integrity < 4",
+      "text": "Your desire for peace may dilute ethical clarity. Build comfort with difficult truths."
+    },
+    {
+      "condition": "risk > 6",
+      "text": "Your sensitivity to danger may limit action. Create safety nets to enable principled decisions."
+    },
+    {
+      "condition": "integrity > 6 && harmony < 3",
+      "text": "Your honesty is powerful — but may feel harsh. Blend truth with empathy for better influence."
+    },
+    {
+      "condition": "true",
+      "text": "Your ethical instincts show developing balance. Continue refining how you protect truth while navigating complex environments."
+    }
+  ]
+}

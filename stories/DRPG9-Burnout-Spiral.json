@@ -1,0 +1,353 @@
+{
+  "metadata": {
+    "uid": "DRPG9-Burnout-Spiral",
+    "title": "The Burnout Spiral",
+    "subtitle": "Lite",
+    "description": "You are caught in a cycle of increasing workload, collapsing boundaries, and emotional strain. Every choice shapes how you protect your energy, manage pressure, negotiate expectations, and recognise your personal limits.",
+    "hint": "Tests boundaries, self-regulation, emotional resilience, courage to negotiate, and workload clarity.",
+    "difficulty": "Medium",
+    "duration": "6-8 minutes",
+    "color": "#ec4899"
+  },
+  "dimensions": [
+    {
+      "key": "risk",
+      "label": "Risk mindset",
+      "description": "How boldly you challenge unhealthy workload patterns.",
+      "maxValue": 12
+    },
+    {
+      "key": "clarity",
+      "label": "Clarity mindset",
+      "description": "How well you define limits, priorities, and structured responses under pressure.",
+      "maxValue": 15
+    },
+    {
+      "key": "courage",
+      "label": "Courage & Boundaries",
+      "description": "How strongly you own your wellbeing and confront overload.",
+      "maxValue": 15
+    },
+    {
+      "key": "empathy",
+      "label": "Emotional & relational awareness",
+      "description": "How you balance self-care with relational consideration.",
+      "maxValue": 12
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene1",
+      "label": "Scene 1",
+      "title": "3:07 AM — The Ping",
+      "tag": "Boundary trigger",
+      "body": "Your phone lights up at 3:07 AM.<br><br><span class=\"highlight\">Boss: “Urgent — need your help on this now.”</span><br><br>Your mind fogs. Your heart sinks.",
+      "tip": "Your instinct reveals your boundary health.",
+      "options": [
+        {
+          "code": "1A",
+          "label": "A",
+          "main": "Reply immediately.",
+          "desc": "You prioritise obligation over rest.",
+          "deltas": { "risk": -1, "clarity": 0, "courage": 2, "empathy": -1 }
+        },
+        {
+          "code": "1B",
+          "label": "B",
+          "main": "Ignore until morning.",
+          "desc": "You protect your rest.",
+          "deltas": { "risk": 0, "clarity": 1, "courage": 0, "empathy": 1 }
+        },
+        {
+          "code": "1C",
+          "label": "C",
+          "main": "Reply: “Will handle at 9 AM.”",
+          "desc": "Clear, firm boundary.",
+          "deltas": { "risk": 1, "clarity": 2, "courage": 1, "empathy": 1 }
+        },
+        {
+          "code": "1D",
+          "label": "D",
+          "main": "Ask why it’s urgent.",
+          "desc": "You challenge the chaos.",
+          "deltas": { "risk": 1, "clarity": 1, "courage": 1, "empathy": 2 }
+        }
+      ]
+    },
+    {
+      "id": "scene2",
+      "label": "Scene 2",
+      "title": "“Just One More Thing…”",
+      "tag": "Over-functioning pattern",
+      "body": "Your team says:<br><br><span class=\"highlight\">“Can you help with just one more task?”</span><br><br>You’re drowning — but they need you.",
+      "tip": "Your response shows people-pleasing vs boundary-setting.",
+      "options": [
+        {
+          "code": "2A",
+          "label": "A",
+          "main": "Say yes automatically.",
+          "desc": "You absorb more than your share.",
+          "deltas": { "risk": -1, "clarity": 0, "courage": 1, "empathy": 2 }
+        },
+        {
+          "code": "2B",
+          "label": "B",
+          "main": "Say no firmly.",
+          "desc": "You protect your focus.",
+          "deltas": { "risk": 1, "clarity": 2, "courage": 2, "empathy": 0 }
+        },
+        {
+          "code": "2C",
+          "label": "C",
+          "main": "Delay politely.",
+          "desc": "You avoid conflict but still manage workload.",
+          "deltas": { "risk": 0, "clarity": 1, "courage": 1, "empathy": 1 }
+        },
+        {
+          "code": "2D",
+          "label": "D",
+          "main": "Delegate.",
+          "desc": "You redistribute responsibility.",
+          "deltas": { "risk": 0, "clarity": 2, "courage": 1, "empathy": 1 }
+        }
+      ]
+    },
+    {
+      "id": "scene3",
+      "label": "Scene 3",
+      "title": "Overwhelm Rises",
+      "tag": "Emotional load",
+      "body": "Your chest tightens. Your to-do list explodes. You can feel burnout creeping in from the edges.",
+      "tip": "Self-regulation begins with interruption.",
+      "options": [
+        {
+          "code": "3A",
+          "label": "A",
+          "main": "Push harder.",
+          "desc": "You fight pressure with brute force.",
+          "deltas": { "risk": -1, "clarity": 0, "courage": 2, "empathy": -1 }
+        },
+        {
+          "code": "3B",
+          "label": "B",
+          "main": "Pause and breathe.",
+          "desc": "You restore clarity through calm.",
+          "deltas": { "risk": 0, "clarity": 1, "courage": 0, "empathy": 1 }
+        },
+        {
+          "code": "3C",
+          "label": "C",
+          "main": "Ask for help.",
+          "desc": "You break the isolation pattern.",
+          "deltas": { "risk": 1, "clarity": 2, "courage": 1, "empathy": 2 }
+        },
+        {
+          "code": "3D",
+          "label": "D",
+          "main": "Review priorities.",
+          "desc": "You reorganise workload logically.",
+          "deltas": { "risk": 0, "clarity": 3, "courage": 1, "empathy": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene4",
+      "label": "Scene 4",
+      "title": "The Overload Continues",
+      "tag": "Negotiation moment",
+      "body": "Your manager adds more tasks with no acknowledgment of your current load.",
+      "tip": "Your decision shows courage vs compliance.",
+      "options": [
+        {
+          "code": "4A",
+          "label": "A",
+          "main": "Accept silently.",
+          "desc": "Avoiding conflict at high cost.",
+          "deltas": { "risk": -1, "clarity": -1, "courage": -1, "empathy": 1 }
+        },
+        {
+          "code": "4B",
+          "label": "B",
+          "main": "Negotiate workload.",
+          "desc": "You advocate for sustainability.",
+          "deltas": { "risk": 0, "clarity": 2, "courage": 2, "empathy": 1 }
+        },
+        {
+          "code": "4C",
+          "label": "C",
+          "main": "Ask what to deprioritise.",
+          "desc": "A structured way to set boundaries.",
+          "deltas": { "risk": 1, "clarity": 3, "courage": 2, "empathy": 1 }
+        },
+        {
+          "code": "4D",
+          "label": "D",
+          "main": "Reject overload outright.",
+          "desc": "You confront the unsustainable pattern.",
+          "deltas": { "risk": 2, "clarity": 1, "courage": 3, "empathy": -1 }
+        }
+      ]
+    },
+    {
+      "id": "scene5",
+      "label": "Scene 5",
+      "title": "Your Body Speaks Up",
+      "tag": "Health signal",
+      "body": "Headaches. Fatigue. A quiet dread waking you every morning. Your body sends warnings.",
+      "tip": "Your wellbeing boundaries appear here.",
+      "options": [
+        {
+          "code": "5A",
+          "label": "A",
+          "main": "Ignore it.",
+          "desc": "You push through damage.",
+          "deltas": { "risk": -1, "clarity": 0, "courage": 1, "empathy": -1 }
+        },
+        {
+          "code": "5B",
+          "label": "B",
+          "main": "Take a half-day break.",
+          "desc": "You respond with small recovery.",
+          "deltas": { "risk": 1, "clarity": 2, "courage": 1, "empathy": 1 }
+        },
+        {
+          "code": "5C",
+          "label": "C",
+          "main": "Schedule a health check.",
+          "desc": "You take wellbeing seriously.",
+          "deltas": { "risk": 1, "clarity": 2, "courage": 1, "empathy": 2 }
+        },
+        {
+          "code": "5D",
+          "label": "D",
+          "main": "Ask for a workload review.",
+          "desc": "You link health to structure.",
+          "deltas": { "risk": 0, "clarity": 3, "courage": 2, "empathy": 1 }
+        }
+      ]
+    },
+    {
+      "id": "scene6",
+      "label": "Scene 6",
+      "title": "Shadow You Appears",
+      "tag": "Internal confrontation",
+      "body": "A tired version of you whispers:<br><br><span class=\"highlight\">“Why do you carry everything alone?”</span>",
+      "tip": "Your deepest burnout pattern reveals itself.",
+      "options": [
+        {
+          "code": "6A",
+          "label": "A",
+          "main": "“Someone has to.”",
+          "desc": "You shoulder everything.",
+          "deltas": { "risk": -1, "clarity": 0, "courage": 2, "empathy": -1 }
+        },
+        {
+          "code": "6B",
+          "label": "B",
+          "main": "“I need better boundaries.”",
+          "desc": "Awareness turns into strength.",
+          "deltas": { "risk": 1, "clarity": 2, "courage": 2, "empathy": 2 }
+        },
+        {
+          "code": "6C",
+          "label": "C",
+          "main": "“Teach me balance.”",
+          "desc": "You invite a healthier strategy.",
+          "deltas": { "risk": 0, "clarity": 3, "courage": 1, "empathy": 2 }
+        },
+        {
+          "code": "6D",
+          "label": "D",
+          "main": "“I don’t know.”",
+          "desc": "Exhaustion overwhelms.",
+          "deltas": { "risk": -1, "clarity": 0, "courage": -1, "empathy": 1 }
+        }
+      ]
+    },
+    {
+      "id": "scene7",
+      "label": "Scene 7",
+      "title": "The Critical Choice",
+      "tag": "Wellbeing clarity",
+      "body": "Three doors form around you — each representing a relationship with rest, boundaries, and work culture:<br><br><strong>SAFE — Take leave</strong><br><strong>SMART — Restructure workload</strong><br><strong>BRAVE — Confront the burnout culture</strong>",
+      "tip": "Your final act defines your next chapter.",
+      "options": [
+        {
+          "code": "7SAFE",
+          "label": "A",
+          "main": "Choose SAFE.",
+          "desc": "You pause to recover.",
+          "deltas": { "risk": 1, "clarity": 1, "courage": 1, "empathy": 1 },
+          "end": true
+        },
+        {
+          "code": "7SMART",
+          "label": "B",
+          "main": "Choose SMART.",
+          "desc": "You redesign your workload structure.",
+          "deltas": { "risk": 0, "clarity": 3, "courage": 2, "empathy": 1 },
+          "end": true
+        },
+        {
+          "code": "7BRAVE",
+          "label": "C",
+          "main": "Choose BRAVE.",
+          "desc": "You challenge leadership directly.",
+          "deltas": { "risk": 3, "clarity": 1, "courage": 4, "empathy": 0 },
+          "end": true
+        }
+      ]
+    }
+  ],
+  "archetypeSystem": {
+    "archetypes": [
+      {
+        "id": "supporter",
+        "label": "The Supporter",
+        "condition": "empathy >= 6 && courage < 5"
+      },
+      {
+        "id": "overfunctioner",
+        "label": "The Over-Functioner",
+        "condition": "courage >= 5 && risk < 0"
+      },
+      {
+        "id": "protector",
+        "label": "The Protector",
+        "condition": "risk >= 2 && clarity >= 4"
+      },
+      {
+        "id": "minimalist",
+        "label": "The Minimalist",
+        "condition": "risk < 0 && clarity >= 3"
+      },
+      {
+        "id": "balanced",
+        "label": "The Balanced Restorer",
+        "condition": "true"
+      }
+    ]
+  },
+  "growthSuggestions": [
+    {
+      "condition": "courage < 3",
+      "text": "You often overextend yourself. Practice small acts of boundary-setting to build confidence in saying no."
+    },
+    {
+      "condition": "clarity < 4",
+      "text": "Burnout hides in ambiguity. Strengthen your workload structure and ask for priority clarification regularly."
+    },
+    {
+      "condition": "risk < 0",
+      "text": "You tend to avoid confrontation. Experiment with gentle negotiation to shift workload sustainably."
+    },
+    {
+      "condition": "empathy > 6",
+      "text": "Your compassion is strong — ensure it doesn’t lead to over-functioning at the cost of your health."
+    },
+    {
+      "condition": "true",
+      "text": "You’re learning to balance care and courage. Keep refining your boundaries and energy management."
+    }
+  ]
+}

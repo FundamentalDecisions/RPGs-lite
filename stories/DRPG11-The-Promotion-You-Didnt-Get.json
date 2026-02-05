@@ -1,0 +1,353 @@
+{
+  "metadata": {
+    "uid": "DRPG11-The-Promotion-You-Didnt-Get",
+    "title": "The Promotion You Didn't Get",
+    "subtitle": "Lite",
+    "description": "You were confident the next career step was yours, but someone else was chosen. Navigate rejection, emotional recovery, and strategic reinvention as you rediscover how your mind handles feedback, resilience, and long-term ownership.",
+    "hint": "Tests your Feedback Receptivity, Emotional Recovery, Resilience, and Career Ownership",
+    "difficulty": "Medium",
+    "duration": "6-8 minutes",
+    "color": "#f59e0b"
+  },
+  "dimensions": [
+    {
+      "key": "fr",
+      "label": "Feedback Receptivity",
+      "description": "How openly you receive and act on developmental feedback",
+      "maxValue": 12
+    },
+    {
+      "key": "er",
+      "label": "Emotional Recovery",
+      "description": "How quickly you regain balance after a setback",
+      "maxValue": 12
+    },
+    {
+      "key": "rs",
+      "label": "Resilience",
+      "description": "Your forward momentum when things don’t go your way",
+      "maxValue": 12
+    },
+    {
+      "key": "co",
+      "label": "Career Ownership",
+      "description": "How actively you take charge of your growth and direction",
+      "maxValue": 12
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene1",
+      "label": "Scene 1",
+      "title": "The unexpected announcement",
+      "tag": "First reaction",
+      "body": "You hear the news during a team meeting: <span class=\"highlight\">someone else got the promotion</span>—someone you quietly believed was less prepared. A dull wave moves through you.",
+      "tip": "Your first move reveals how you manage ego and emotion.",
+      "options": [
+        {
+          "code": "1A",
+          "label": "A",
+          "main": "Ask your manager for a quick chat.",
+          "desc": "Direct, curious, and ready to face reality.",
+          "deltas": { "fr": 2, "er": 1, "rs": 1, "co": 2 }
+        },
+        {
+          "code": "1B",
+          "label": "B",
+          "main": "Stay silent and keep working.",
+          "desc": "You avoid exposing disappointment.",
+          "deltas": { "fr": -1, "er": 0, "rs": -2, "co": 0 }
+        },
+        {
+          "code": "1C",
+          "label": "C",
+          "main": "Assess who else was considered.",
+          "desc": "You analyze the competitive landscape first.",
+          "deltas": { "fr": 0, "er": 1, "rs": 1, "co": 1 }
+        },
+        {
+          "code": "1D",
+          "label": "D",
+          "main": "Convince yourself you didn't want it anyway.",
+          "desc": "Self-protection through withdrawal.",
+          "deltas": { "fr": -2, "er": -1, "rs": -2, "co": -1 }
+        }
+      ]
+    },
+    {
+      "id": "scene2",
+      "label": "Scene 2",
+      "title": "Your manager checks in",
+      "tag": "Feedback moment",
+      "body": "Later that afternoon, your manager asks: <span class=\"highlight\">“How are you feeling about the news?”</span> Their tone is careful.",
+      "tip": "Your response reveals your openness to development.",
+      "options": [
+        {
+          "code": "2A",
+          "label": "A",
+          "main": "\"I’d like to understand what I can improve.\"",
+          "desc": "You lean into growth.",
+          "deltas": { "fr": 3, "er": 1, "rs": 1, "co": 2 }
+        },
+        {
+          "code": "2B",
+          "label": "B",
+          "main": "\"Maybe. Not sure yet.\"",
+          "desc": "Cautious, emotionally still processing.",
+          "deltas": { "fr": 1, "er": 1, "rs": -1, "co": 0 }
+        },
+        {
+          "code": "2C",
+          "label": "C",
+          "main": "Ask what expectations weren’t met.",
+          "desc": "You dig for clarity before emotion takes over.",
+          "deltas": { "fr": 2, "er": 1, "rs": 1, "co": 1 }
+        },
+        {
+          "code": "2D",
+          "label": "D",
+          "main": "\"It’s fine, I guess.\"",
+          "desc": "You hide frustration instead of using it.",
+          "deltas": { "fr": -1, "er": -1, "rs": -2, "co": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene3",
+      "label": "Scene 3",
+      "title": "The colleague who got it",
+      "tag": "Emotional trigger",
+      "body": "In the pantry, the newly promoted colleague hints that <span class=\"highlight\">they were surprised too</span>. You feel something tense inside.",
+      "tip": "Your reaction shows emotional maturity under discomfort.",
+      "options": [
+        {
+          "code": "3A",
+          "label": "A",
+          "main": "Congratulate them sincerely.",
+          "desc": "You choose grace over ego.",
+          "deltas": { "fr": 2, "er": 2, "rs": 1, "co": 1 }
+        },
+        {
+          "code": "3B",
+          "label": "B",
+          "main": "Say nothing and walk away.",
+          "desc": "You avoid emotional engagement.",
+          "deltas": { "fr": -1, "er": -1, "rs": -1, "co": 0 }
+        },
+        {
+          "code": "3C",
+          "label": "C",
+          "main": "Ask what feedback they were given.",
+          "desc": "You look for clues into the decision.",
+          "deltas": { "fr": 1, "er": 1, "rs": 1, "co": 1 }
+        },
+        {
+          "code": "3D",
+          "label": "D",
+          "main": "\"Why do you think they picked you?\"",
+          "desc": "Courageous but emotionally risky.",
+          "deltas": { "fr": 0, "er": -1, "rs": 2, "co": 1 }
+        }
+      ]
+    },
+    {
+      "id": "scene4",
+      "label": "Scene 4",
+      "title": "The internal reflection",
+      "tag": "Resilience choice",
+      "body": "At home, the sting returns. Your mind replays the meeting. The ‘what ifs’ and ‘should haves’ get louder.",
+      "tip": "Your next step shows whether you spiral or re-anchor.",
+      "options": [
+        {
+          "code": "4A",
+          "label": "A",
+          "main": "Review your past year and list concrete wins.",
+          "desc": "You rebuild confidence through facts.",
+          "deltas": { "fr": 1, "er": 2, "rs": 2, "co": 2 }
+        },
+        {
+          "code": "4B",
+          "label": "B",
+          "main": "Tell yourself it’s pointless to try again.",
+          "desc": "You give disappointment the steering wheel.",
+          "deltas": { "fr": -1, "er": -2, "rs": -2, "co": -1 }
+        },
+        {
+          "code": "4C",
+          "label": "C",
+          "main": "Call a mentor for perspective.",
+          "desc": "You seek grounded clarity.",
+          "deltas": { "fr": 2, "er": 1, "rs": 1, "co": 1 }
+        },
+        {
+          "code": "4D",
+          "label": "D",
+          "main": "Distract yourself and avoid thinking about it.",
+          "desc": "Short-term relief, long-term stagnation.",
+          "deltas": { "fr": -1, "er": 0, "rs": -1, "co": -1 }
+        }
+      ]
+    },
+    {
+      "id": "scene5",
+      "label": "Scene 5",
+      "title": "The career crossroads",
+      "tag": "Agency",
+      "body": "The next morning, you wake up with a touch more clarity. A question surfaces: <span class=\"highlight\">What now?</span>",
+      "tip": "Your answer reveals your sense of ownership.",
+      "options": [
+        {
+          "code": "5A",
+          "label": "A",
+          "main": "Request a development plan with clear milestones.",
+          "desc": "You take structured ownership.",
+          "deltas": { "fr": 2, "er": 1, "rs": 2, "co": 3 }
+        },
+        {
+          "code": "5B",
+          "label": "B",
+          "main": "Quietly start job hunting.",
+          "desc": "You preserve autonomy but avoid repair.",
+          "deltas": { "fr": 0, "er": 0, "rs": 1, "co": 1 }
+        },
+        {
+          "code": "5C",
+          "label": "C",
+          "main": "Double down: work harder and hope next time is yours.",
+          "desc": "Effort without strategy.",
+          "deltas": { "fr": 1, "er": 1, "rs": 2, "co": 0 }
+        },
+        {
+          "code": "5D",
+          "label": "D",
+          "main": "Withdraw emotionally from the role.",
+          "desc": "A subtle form of resignation.",
+          "deltas": { "fr": -1, "er": -1, "rs": -2, "co": -1 }
+        }
+      ]
+    },
+    {
+      "id": "scene6",
+      "label": "Scene 6",
+      "title": "Shadow You Appears",
+      "tag": "Self-confrontation",
+      "body": "In a moment of stillness, a phantom voice plays in your mind:<br><span class=\"highlight\">Shadow You</span> — the version who reacts to rejection with the opposite instinct.<br><br><em>“Why does this setback define you so much?”</em>",
+      "tip": "Your answer reveals emotional maturity and self-awareness.",
+      "options": [
+        {
+          "code": "6A",
+          "label": "A",
+          "main": "\"I want to rise from this, not sink into it.\"",
+          "desc": "You treat the wound as fuel.",
+          "deltas": { "fr": 2, "er": 2, "rs": 3, "co": 2 }
+        },
+        {
+          "code": "6B",
+          "label": "B",
+          "main": "\"I'm scared this means I'm not good enough.\"",
+          "desc": "You admit vulnerability honestly.",
+          "deltas": { "fr": 1, "er": 1, "rs": 0, "co": 1 }
+        },
+        {
+          "code": "6C",
+          "label": "C",
+          "main": "\"Help me understand the lesson here.\"",
+          "desc": "You lean into reflection with intent.",
+          "deltas": { "fr": 2, "er": 1, "rs": 1, "co": 2 }
+        },
+        {
+          "code": "6D",
+          "label": "D",
+          "main": "\"Whatever. It doesn't matter anymore.\"",
+          "desc": "Emotional numbness as defense.",
+          "deltas": { "fr": -1, "er": -2, "rs": -2, "co": -1 }
+        }
+      ]
+    },
+    {
+      "id": "scene7",
+      "label": "Scene 7",
+      "title": "Choose your final door",
+      "tag": "Future mindset",
+      "body": "Three paths crystallize ahead — each a different way of rewriting your story:<br><br><strong>Door 1 — The Safe Reset</strong><br><strong>Door 2 — The Strategic Renewal</strong><br><strong>Door 3 — The Bold Reinvention</strong>",
+      "tip": "This final choice reveals how you reshape your next chapter.",
+      "options": [
+        {
+          "code": "7SAFE",
+          "label": "A",
+          "main": "Enter the Safe Reset.",
+          "desc": "Steady healing and small steps.",
+          "deltas": { "fr": 0, "er": 1, "rs": 0, "co": 0 },
+          "end": true
+        },
+        {
+          "code": "7SMART",
+          "label": "B",
+          "main": "Enter the Strategic Renewal.",
+          "desc": "Clarity and proactive growth.",
+          "deltas": { "fr": 2, "er": 2, "rs": 2, "co": 3 },
+          "end": true
+        },
+        {
+          "code": "7BRAVE",
+          "label": "C",
+          "main": "Enter the Bold Reinvention.",
+          "desc": "A courageous leap into transformation.",
+          "deltas": { "fr": 1, "er": 2, "rs": 3, "co": 4 },
+          "end": true
+        }
+      ]
+    }
+  ],
+  "archetypeSystem": {
+    "archetypes": [
+      {
+        "id": "the_reflector",
+        "label": "The Reflector",
+        "condition": "fr >= 5 && er >= 5"
+      },
+      {
+        "id": "the_resilient_climber",
+        "label": "The Resilient Climber",
+        "condition": "rs >= 6 && co >= 5"
+      },
+      {
+        "id": "the_strategic_learner",
+        "label": "The Strategic Learner",
+        "condition": "fr >= 5 && co >= 5"
+      },
+      {
+        "id": "the_balanced_builder",
+        "label": "The Balanced Builder",
+        "condition": "er >= 4 && rs >= 4"
+      },
+      {
+        "id": "the_foundation",
+        "label": "The Foundation",
+        "condition": "true"
+      }
+    ]
+  },
+  "growthSuggestions": [
+    {
+      "condition": "fr < 4",
+      "text": "Feedback is raw when you’re hurt — try sitting with it longer before dismissing it. Rich insight hides behind discomfort."
+    },
+    {
+      "condition": "er < 4",
+      "text": "Recovery takes intention. Build emotional scaffolding: journaling, reflection, or speaking with a mentor."
+    },
+    {
+      "condition": "rs < 4",
+      "text": "Setbacks feel personal now, but progress returns through small forward steps. Consistency beats intensity."
+    },
+    {
+      "condition": "co < 4",
+      "text": "Reclaim the steering wheel. Define your next milestone instead of waiting for someone else to choose you."
+    },
+    {
+      "condition": "true",
+      "text": "Your responses show emerging clarity. Continue turning reflection into action and you will reshape your trajectory."
+    }
+  ]
+}

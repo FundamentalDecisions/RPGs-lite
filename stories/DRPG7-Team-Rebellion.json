@@ -1,0 +1,353 @@
+{
+  "metadata": {
+    "uid": "DRPG7-Team-Rebellion",
+    "title": "The Team Rebellion",
+    "subtitle": "Lite",
+    "description": "Your team pushes back — openly. Unclear direction, rising tensions, and emerging factions test your influence, clarity, and emotional intelligence under pressure. Your responses reveal how you lead through conflict, regain psychological safety, and rebuild trust.",
+    "hint": "Tests Influence, Conflict Mindset, Clarity Mindset, Harmony/Empathy Mindset",
+    "difficulty": "Medium",
+    "duration": "5-7 minutes",
+    "color": "#0ea5e9"
+  },
+  "dimensions": [
+    {
+      "key": "risk",
+      "label": "Risk mindset",
+      "description": "How you respond to rising group tension and potential loss of authority.",
+      "maxValue": 12
+    },
+    {
+      "key": "clarity",
+      "label": "Clarity mindset",
+      "description": "How you restore structure under conflict and uncertainty.",
+      "maxValue": 15
+    },
+    {
+      "key": "courage",
+      "label": "Influence & ownership",
+      "description": "How confidently you take charge of dysfunctional dynamics.",
+      "maxValue": 15
+    },
+    {
+      "key": "empathy",
+      "label": "Harmony & psychological safety",
+      "description": "How you nurture emotional safety while making hard calls.",
+      "maxValue": 12
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene1",
+      "label": "Scene 1",
+      "title": "The Revolt Begins",
+      "tag": "Conflict trigger",
+      "body": "Your team suddenly pushes back:<br><br><span class=\"highlight\">“We’re tired of unclear direction.”</span><br><br>This is the moment where authority, influence, and emotional presence collide.",
+      "tip": "First reactions determine psychological safety.",
+      "options": [
+        {
+          "code": "1A",
+          "label": "A",
+          "main": "Address immediately.",
+          "desc": "You face the revolt head-on.",
+          "deltas": { "risk": 0, "clarity": 2, "courage": 2, "empathy": 1 }
+        },
+        {
+          "code": "1B",
+          "label": "B",
+          "main": "Delay meeting.",
+          "desc": "You try to reduce heat by postponing.",
+          "deltas": { "risk": -1, "clarity": -1, "courage": -1, "empathy": 2 }
+        },
+        {
+          "code": "1C",
+          "label": "C",
+          "main": "Observe quietly.",
+          "desc": "You read the emotional undercurrent first.",
+          "deltas": { "risk": 0, "clarity": 1, "courage": 0, "empathy": 2 }
+        },
+        {
+          "code": "1D",
+          "label": "D",
+          "main": "Challenge them: “Be specific.”",
+          "desc": "You assert structure immediately.",
+          "deltas": { "risk": 1, "clarity": 1, "courage": 1, "empathy": -1 }
+        }
+      ]
+    },
+    {
+      "id": "scene2",
+      "label": "Scene 2",
+      "title": "The Ringleader Speaks",
+      "tag": "Power dynamics",
+      "body": "One team member steps forward:<br><br><span class=\"highlight\">“We need a new approach.”</span><br><br>The room’s energy shifts — eyes turn toward you.",
+      "tip": "Your response shapes group power balance.",
+      "options": [
+        {
+          "code": "2A",
+          "label": "A",
+          "main": "Ask for their proposal.",
+          "desc": "You turn their challenge into collaboration.",
+          "deltas": { "risk": 0, "clarity": 2, "courage": 1, "empathy": 2 }
+        },
+        {
+          "code": "2B",
+          "label": "B",
+          "main": "Defend your leadership.",
+          "desc": "You reinforce authority and competence.",
+          "deltas": { "risk": 1, "clarity": 0, "courage": 2, "empathy": -1 }
+        },
+        {
+          "code": "2C",
+          "label": "C",
+          "main": "Invite silent members.",
+          "desc": "You broaden psychological safety.",
+          "deltas": { "risk": 0, "clarity": 1, "courage": 1, "empathy": 3 }
+        },
+        {
+          "code": "2D",
+          "label": "D",
+          "main": "Reset the meeting agenda.",
+          "desc": "You take charge with renewed structure.",
+          "deltas": { "risk": 1, "clarity": 2, "courage": 2, "empathy": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene3",
+      "label": "Scene 3",
+      "title": "Tension Spikes",
+      "tag": "Group conflict",
+      "body": "Suddenly, the team splits into two factions — frustration building, voices rising.",
+      "tip": "This is the moment influence and conflict mastery truly show.",
+      "options": [
+        {
+          "code": "3A",
+          "label": "A",
+          "main": "Force alignment.",
+          "desc": "You assert control to stop escalation.",
+          "deltas": { "risk": 1, "clarity": 1, "courage": 2, "empathy": -1 }
+        },
+        {
+          "code": "3B",
+          "label": "B",
+          "main": "Facilitate dialogue.",
+          "desc": "You guide them toward shared understanding.",
+          "deltas": { "risk": 0, "clarity": 2, "courage": 1, "empathy": 3 }
+        },
+        {
+          "code": "3C",
+          "label": "C",
+          "main": "Suggest compromise.",
+          "desc": "You moderate expectations.",
+          "deltas": { "risk": 0, "clarity": 1, "courage": 1, "empathy": 1 }
+        },
+        {
+          "code": "3D",
+          "label": "D",
+          "main": "Let factions express fully.",
+          "desc": "You create emotional space.",
+          "deltas": { "risk": -1, "clarity": 1, "courage": 0, "empathy": 2 }
+        }
+      ]
+    },
+    {
+      "id": "scene4",
+      "label": "Scene 4",
+      "title": "A Quiet Member Cries",
+      "tag": "Psychological safety",
+      "body": "Amid heated discussions, you notice someone quietly crying in the corner — overwhelmed, silent, unseen.",
+      "tip": "Your leadership here defines team emotional culture.",
+      "options": [
+        {
+          "code": "4A",
+          "label": "A",
+          "main": "Stop the meeting and check on them.",
+          "desc": "You prioritize safety over agenda.",
+          "deltas": { "risk": -1, "clarity": 0, "courage": 1, "empathy": 3 }
+        },
+        {
+          "code": "4B",
+          "label": "B",
+          "main": "Ignore and continue.",
+          "desc": "You focus exclusively on task and order.",
+          "deltas": { "risk": 0, "clarity": 1, "courage": 1, "empathy": -2 }
+        },
+        {
+          "code": "4C",
+          "label": "C",
+          "main": "Ask them to share.",
+          "desc": "You invite emotional disclosure.",
+          "deltas": { "risk": 0, "clarity": 1, "courage": 1, "empathy": 2 }
+        },
+        {
+          "code": "4D",
+          "label": "D",
+          "main": "Debrief privately later.",
+          "desc": "You support while maintaining group flow.",
+          "deltas": { "risk": -1, "clarity": 1, "courage": 2, "empathy": 2 }
+        }
+      ]
+    },
+    {
+      "id": "scene5",
+      "label": "Scene 5",
+      "title": "The Team Asks for a Vote",
+      "tag": "Authority challenge",
+      "body": "Momentum builds. Someone says the words that change power dynamics:<br><br><span class=\"highlight\">“Should we decide by majority vote?”</span>",
+      "tip": "How you share or retain power defines trust.",
+      "options": [
+        {
+          "code": "5A",
+          "label": "A",
+          "main": "Accept a majority vote.",
+          "desc": "You democratize decision-making.",
+          "deltas": { "risk": 0, "clarity": 1, "courage": 1, "empathy": 2 }
+        },
+        {
+          "code": "5B",
+          "label": "B",
+          "main": "Reject — leader decides.",
+          "desc": "You assert positional authority.",
+          "deltas": { "risk": 2, "clarity": 1, "courage": 2, "empathy": -1 }
+        },
+        {
+          "code": "5C",
+          "label": "C",
+          "main": "Suggest trial period.",
+          "desc": "You create a safe compromise.",
+          "deltas": { "risk": 0, "clarity": 2, "courage": 1, "empathy": 1 }
+        },
+        {
+          "code": "5D",
+          "label": "D",
+          "main": "Redirect to core goals.",
+          "desc": "You elevate the discussion above conflict.",
+          "deltas": { "risk": 0, "clarity": 3, "courage": 2, "empathy": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene6",
+      "label": "Scene 6",
+      "title": "Shadow You Arrives",
+      "tag": "Inner leadership identity",
+      "body": "A translucent silhouette — your inner opposite — whispers:<br><br><span class=\"highlight\">“Power or harmony — what will you choose?”</span>",
+      "tip": "Your answer reveals your leadership instinct under pressure.",
+      "options": [
+        {
+          "code": "6A",
+          "label": "A",
+          "main": "Power.",
+          "desc": "You take control decisively.",
+          "deltas": { "risk": 1, "clarity": 0, "courage": 2, "empathy": -1 }
+        },
+        {
+          "code": "6B",
+          "label": "B",
+          "main": "Harmony.",
+          "desc": "You prioritize emotional cohesion.",
+          "deltas": { "risk": -1, "clarity": 1, "courage": 0, "empathy": 3 }
+        },
+        {
+          "code": "6C",
+          "label": "C",
+          "main": "Balance.",
+          "desc": "You integrate firmness and safety.",
+          "deltas": { "risk": 0, "clarity": 2, "courage": 1, "empathy": 2 }
+        },
+        {
+          "code": "6D",
+          "label": "D",
+          "main": "Avoid.",
+          "desc": "You retreat from tension.",
+          "deltas": { "risk": -1, "clarity": -1, "courage": -2, "empathy": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene7",
+      "label": "Scene 7",
+      "title": "Final Leadership Decision",
+      "tag": "Your leadership identity",
+      "body": "Three doors materialize — each glowing with a different leadership philosophy:<br><br><strong>SAFE — Go With Majority</strong><br><strong>SMART — Hybrid Model</strong><br><strong>BRAVE — Leader Decides</strong>",
+      "tip": "This final choice reveals your dominant leadership archetype.",
+      "options": [
+        {
+          "code": "7SAFE",
+          "label": "A",
+          "main": "Choose SAFE.",
+          "desc": "You maximize harmony and shared ownership.",
+          "deltas": { "risk": -1, "clarity": 1, "courage": 0, "empathy": 2 },
+          "end": true
+        },
+        {
+          "code": "7SMART",
+          "label": "B",
+          "main": "Choose SMART.",
+          "desc": "You blend structure and buy-in.",
+          "deltas": { "risk": 0, "clarity": 3, "courage": 1, "empathy": 1 },
+          "end": true
+        },
+        {
+          "code": "7BRAVE",
+          "label": "C",
+          "main": "Choose BRAVE.",
+          "desc": "You step into full authority to realign the team.",
+          "deltas": { "risk": 2, "clarity": 1, "courage": 3, "empathy": -1 },
+          "end": true
+        }
+      ]
+    }
+  ],
+  "archetypeSystem": {
+    "archetypes": [
+      {
+        "id": "harmonizer",
+        "label": "The Harmonizer",
+        "condition": "empathy >= 6 && courage < 4"
+      },
+      {
+        "id": "challenger",
+        "label": "The Challenger",
+        "condition": "risk >= 2 && courage >= 5"
+      },
+      {
+        "id": "analyst",
+        "label": "The Analyst",
+        "condition": "clarity >= 7"
+      },
+      {
+        "id": "mediator",
+        "label": "The Mediator",
+        "condition": "empathy >= 5 && clarity >= 4"
+      },
+      {
+        "id": "generalist",
+        "label": "The Leadership Generalist",
+        "condition": "true"
+      }
+    ]
+  },
+  "growthSuggestions": [
+    {
+      "condition": "empathy < 3",
+      "text": "You tend to push tasks over emotions. Strengthen psychological safety by naming feelings and checking in proactively."
+    },
+    {
+      "condition": "clarity < 4",
+      "text": "Your team may struggle without structured thinking. Practice reframing conflict into clear problem statements."
+    },
+    {
+      "condition": "courage < 4",
+      "text": "You avoid tension at key moments. Learn to hold discomfort while guiding difficult discussions."
+    },
+    {
+      "condition": "risk > 5",
+      "text": "You take bold stances in conflict. Balance this by building more relational buffers."
+    },
+    {
+      "condition": "true",
+      "text": "You show developing influence. Continue building both clarity and emotional presence in tough team dynamics."
+    }
+  ]
+}

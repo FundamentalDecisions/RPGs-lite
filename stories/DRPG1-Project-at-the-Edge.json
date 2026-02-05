@@ -1,0 +1,358 @@
+{
+  "metadata": {
+    "uid": "DRPG1-Project-at-the-Edge",
+    "title": "Project at the Edge",
+    "subtitle": "Lite",
+    "description": "You're a project lead facing a crisis. Your client demands an update today, but your team is 17 days behind schedule. Navigate workplace pressure and discover how your mind handles risk, clarity, courage, and empathy.",
+    "hint": "Tests your Risk mindset, Clarity & structure, Courage / ownership, and Empathy / people focus",
+    "difficulty": "Medium",
+    "duration": "5-7 minutes",
+    "color": "#38bdf8"
+  },
+  "dimensions": [
+    {
+      "key": "risk",
+      "label": "Risk mindset",
+      "description": "How you approach uncertainty and bold decisions",
+      "maxValue": 10
+    },
+    {
+      "key": "clarity",
+      "label": "Clarity & structure",
+      "description": "How you prioritize understanding and organization",
+      "maxValue": 15
+    },
+    {
+      "key": "courage",
+      "label": "Courage / ownership",
+      "description": "How you take responsibility under pressure",
+      "maxValue": 15
+    },
+    {
+      "key": "empathy",
+      "label": "Empathy / people focus",
+      "description": "How you consider others in your decisions",
+      "maxValue": 12
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene1",
+      "label": "Scene 1",
+      "title": "The email at 7:28 AM",
+      "tag": "First reaction",
+      "body": "You arrive at work. Coffee in one hand, laptop in the other. A red notification pops up: <span class=\"highlight\">\"URGENT — NEED UPDATE TODAY\"</span> from your CEO. You know the project is not fully on track.",
+      "tip": "Your first move reveals how you meet pressure.",
+      "options": [
+        {
+          "code": "1A",
+          "label": "A",
+          "main": "Open the email immediately.",
+          "desc": "Face the message head-on before anything else.",
+          "deltas": { "risk": 0, "clarity": 2, "courage": 2, "empathy": 0 }
+        },
+        {
+          "code": "1B",
+          "label": "B",
+          "main": "Get coffee and take a breath first.",
+          "desc": "Stabilise yourself to avoid reacting from panic.",
+          "deltas": { "risk": -1, "clarity": 0, "courage": -1, "empathy": 1 }
+        },
+        {
+          "code": "1C",
+          "label": "C",
+          "main": "Check the project board before opening.",
+          "desc": "Collect facts first so you're not blind.",
+          "deltas": { "risk": 0, "clarity": 3, "courage": 1, "empathy": 0 }
+        },
+        {
+          "code": "1D",
+          "label": "D",
+          "main": "Message a teammate: \"Did something happen?\"",
+          "desc": "Seek social confirmation before facing it.",
+          "deltas": { "risk": -1, "clarity": -1, "courage": -2, "empathy": 2 }
+        }
+      ]
+    },
+    {
+      "id": "scene2",
+      "label": "Scene 2",
+      "title": "What do you tell the CEO?",
+      "tag": "Ownership",
+      "body": "You open the email. The message is sharp: <span class=\"highlight\">\"Client is asking for an update today. Where are we?\"</span><br><br>The truth: you're behind schedule by 17 days.",
+      "tip": "Your words now reveal how you handle responsibility.",
+      "options": [
+        {
+          "code": "2A",
+          "label": "A",
+          "main": "Tell the CEO the truth and promise a plan in 1 hour.",
+          "desc": "Direct, accountable, and proactive.",
+          "deltas": { "risk": 1, "clarity": 2, "courage": 3, "empathy": 0 }
+        },
+        {
+          "code": "2B",
+          "label": "B",
+          "main": "Ask the team: \"Can we catch up in two days?\"",
+          "desc": "Hopeful but risky if unrealistic.",
+          "deltas": { "risk": -1, "clarity": 0, "courage": -1, "empathy": 2 }
+        },
+        {
+          "code": "2C",
+          "label": "C",
+          "main": "Try to fix the blockers yourself quietly.",
+          "desc": "You take everything on your shoulders.",
+          "deltas": { "risk": 0, "clarity": 1, "courage": 2, "empathy": -1 }
+        },
+        {
+          "code": "2D",
+          "label": "D",
+          "main": "Soften the truth: \"We had challenges but working on it.\"",
+          "desc": "You avoid confrontation and soften impact.",
+          "deltas": { "risk": -1, "clarity": -1, "courage": -2, "empathy": 3 }
+        }
+      ]
+    },
+    {
+      "id": "scene3",
+      "label": "Scene 3",
+      "title": "The morning huddle",
+      "tag": "Leadership style",
+      "body": "Your team gathers. Everyone looks tense. A developer finally says: <span class=\"highlight\">\"Requirements changed too often. We're confused.\"</span>",
+      "tip": "Your reaction shapes psychological safety.",
+      "options": [
+        {
+          "code": "3A",
+          "label": "A",
+          "main": "Clarify the requirements again.",
+          "desc": "You take charge and provide structure.",
+          "deltas": { "risk": 0, "clarity": 3, "courage": 1, "empathy": -1 }
+        },
+        {
+          "code": "3B",
+          "label": "B",
+          "main": "Ask each member what's blocking them.",
+          "desc": "You prioritise understanding and support.",
+          "deltas": { "risk": -1, "clarity": 0, "courage": 1, "empathy": 3 }
+        },
+        {
+          "code": "3C",
+          "label": "C",
+          "main": "Refocus: \"Let's deliver what we can today.\"",
+          "desc": "You shift from talk to action.",
+          "deltas": { "risk": 1, "clarity": 2, "courage": 2, "empathy": 0 }
+        },
+        {
+          "code": "3D",
+          "label": "D",
+          "main": "Stay silent and observe first.",
+          "desc": "You read dynamics before responding.",
+          "deltas": { "risk": 0, "clarity": 1, "courage": 0, "empathy": 2 }
+        }
+      ]
+    },
+    {
+      "id": "scene4",
+      "label": "Scene 4",
+      "title": "The client call",
+      "tag": "Pressure response",
+      "body": "It's time for the client call. They look tense:<br><span class=\"highlight\">\"Are we on track? This delay affects our launch.\"</span>",
+      "tip": "Your response shows courage and strategic clarity.",
+      "options": [
+        {
+          "code": "4A",
+          "label": "A",
+          "main": "\"We're behind — here's why, and here's the recovery plan.\"",
+          "desc": "Radical transparency with a solution.",
+          "deltas": { "risk": 1, "clarity": 3, "courage": 3, "empathy": 0 }
+        },
+        {
+          "code": "4B",
+          "label": "B",
+          "main": "\"We had issues, but we're stabilising.\"",
+          "desc": "Reassuring tone, partial truth.",
+          "deltas": { "risk": -1, "clarity": 0, "courage": -1, "empathy": 2 }
+        },
+        {
+          "code": "4C",
+          "label": "C",
+          "main": "\"We can meet launch if we cut some features.\"",
+          "desc": "A bold strategic trade-off.",
+          "deltas": { "risk": 1, "clarity": 2, "courage": 2, "empathy": 0 }
+        },
+        {
+          "code": "4D",
+          "label": "D",
+          "main": "\"What is most critical for your launch?\"",
+          "desc": "You shift into collaborative diagnosis.",
+          "deltas": { "risk": 0, "clarity": 2, "courage": 1, "empathy": 2 }
+        }
+      ]
+    },
+    {
+      "id": "scene5",
+      "label": "Scene 5",
+      "title": "The CEO follows up",
+      "tag": "Integrity vs harmony",
+      "body": "Your CEO messages immediately:<br><span class=\"highlight\">\"Did you tell them the full truth?\"</span>",
+      "tip": "Here you show alignment or avoidance.",
+      "options": [
+        {
+          "code": "5A",
+          "label": "A",
+          "main": "\"Yes. The full truth and a recovery plan.\"",
+          "desc": "You stand by transparency.",
+          "deltas": { "risk": 1, "clarity": 1, "courage": 3, "empathy": 0 }
+        },
+        {
+          "code": "5B",
+          "label": "B",
+          "main": "\"I softened it a little.\"",
+          "desc": "You prioritised emotional safety.",
+          "deltas": { "risk": -1, "clarity": -1, "courage": -2, "empathy": 2 }
+        },
+        {
+          "code": "5C",
+          "label": "C",
+          "main": "\"I proposed cutting features to meet deadline.\"",
+          "desc": "Practical and solution-driven.",
+          "deltas": { "risk": 1, "clarity": 2, "courage": 2, "empathy": 0 }
+        },
+        {
+          "code": "5D",
+          "label": "D",
+          "main": "\"I asked for their top priority first.\"",
+          "desc": "Context before commitment.",
+          "deltas": { "risk": 0, "clarity": 1, "courage": 1, "empathy": 2 }
+        }
+      ]
+    },
+    {
+      "id": "scene6",
+      "label": "Scene 6",
+      "title": "Shadow You Appears",
+      "tag": "Self-confrontation",
+      "body": "A glitch flashes on your screen. A character appears:<br><span class=\"highlight\">Shadow You</span> — a version of you who chooses the opposite mindset.<br><br>They ask: <em>\"Why do you always choose the same patterns?\"</em>",
+      "tip": "Your response shows openness or defensiveness.",
+      "options": [
+        {
+          "code": "6A",
+          "label": "A",
+          "main": "\"Your approach feels risky.\"",
+          "desc": "Caution meets boldness.",
+          "deltas": { "risk": -1, "clarity": 1, "courage": -1, "empathy": 0 }
+        },
+        {
+          "code": "6B",
+          "label": "B",
+          "main": "\"Interesting… tell me more.\"",
+          "desc": "Curious and receptive.",
+          "deltas": { "risk": 0, "clarity": 1, "courage": 1, "empathy": 2 }
+        },
+        {
+          "code": "6C",
+          "label": "C",
+          "main": "\"I want to understand how you think.\"",
+          "desc": "Deep introspection.",
+          "deltas": { "risk": 0, "clarity": 2, "courage": 1, "empathy": 2 }
+        },
+        {
+          "code": "6D",
+          "label": "D",
+          "main": "\"No thanks. I trust my way.\"",
+          "desc": "Comfort-zone protection.",
+          "deltas": { "risk": 0, "clarity": 0, "courage": 0, "empathy": -1 }
+        }
+      ]
+    },
+    {
+      "id": "scene7",
+      "label": "Scene 7",
+      "title": "Choose your final door",
+      "tag": "Future mindset",
+      "body": "Three glowing doors appear in a long corridor. Each represents a mindset path:<br><br><strong>Door 1 — The Safe Path</strong><br><strong>Door 2 — The Smart Path</strong><br><strong>Door 3 — The Brave Path</strong>",
+      "tip": "This final choice reveals how you face the future.",
+      "options": [
+        {
+          "code": "7SAFE",
+          "label": "A",
+          "main": "Enter the Safe Path.",
+          "desc": "Stability and predictability.",
+          "deltas": { "risk": -2, "clarity": 1, "courage": -1, "empathy": 0 },
+          "end": true
+        },
+        {
+          "code": "7SMART",
+          "label": "B",
+          "main": "Enter the Smart Path.",
+          "desc": "Clarity and calculated moves.",
+          "deltas": { "risk": 0, "clarity": 3, "courage": 1, "empathy": 0 },
+          "end": true
+        },
+        {
+          "code": "7BRAVE",
+          "label": "C",
+          "main": "Enter the Brave Path.",
+          "desc": "Boldness and self-trust.",
+          "deltas": { "risk": 3, "clarity": 0, "courage": 3, "empathy": 0 },
+          "end": true
+        }
+      ]
+    }
+  ],
+  "archetypeSystem": {
+    "archetypes": [
+      {
+        "id": "strategist",
+        "label": "The Strategist",
+        "condition": "courage >= 5 && clarity >= 5"
+      },
+      {
+        "id": "leader",
+        "label": "The Leader",
+        "condition": "courage >= 5 && empathy >= 5"
+      },
+      {
+        "id": "analyst",
+        "label": "The Analyst",
+        "condition": "clarity >= 5 && risk < 2"
+      },
+      {
+        "id": "supporter",
+        "label": "The Supporter",
+        "condition": "empathy >= 5 && courage < 5"
+      },
+      {
+        "id": "pioneer",
+        "label": "The Pioneer",
+        "condition": "risk >= 2 && courage >= 5"
+      },
+      {
+        "id": "pragmatist",
+        "label": "The Pragmatist",
+        "condition": "true"
+      }
+    ]
+  },
+  "growthSuggestions": [
+    {
+      "condition": "courage < 4 && clarity > 5",
+      "text": "Consider taking more ownership. Your analytical strength can be paired with bolder action."
+    },
+    {
+      "condition": "empathy < 4 && courage > 5",
+      "text": "While you take decisive action, consider how decisions impact your team. Empathy strengthens leadership."
+    },
+    {
+      "condition": "clarity < 4 && risk > 2",
+      "text": "Your bold approach works best when paired with clarity. Take time to gather information before acting."
+    },
+    {
+      "condition": "risk < 0",
+      "text": "You have strong stability. Challenge yourself to take calculated risks—growth often lives at the edge of comfort."
+    },
+    {
+      "condition": "true",
+      "text": "You show balance across dimensions. Continue integrating your strengths and watch for patterns in how you lead."
+    }
+  ]
+}

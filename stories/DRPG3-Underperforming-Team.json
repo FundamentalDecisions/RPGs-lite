@@ -1,0 +1,358 @@
+{
+  "metadata": {
+    "uid": "DRPG3-Underperforming-Team",
+    "title": "The Underperforming Team",
+    "subtitle": "Lite",
+    "description": "Your team is falling behind. Deadlines slip, conflicts rise, and morale sinks. Today you face the leadership challenge of diagnosing performance, balancing empathy with firmness, and deciding whether to coach, confront, or restructure.",
+    "hint": "Tests your Empathy, Accountability, Coaching mindset, and Directness under pressure",
+    "difficulty": "Medium",
+    "duration": "5-7 minutes",
+    "color": "#fb923c"
+  },
+  "dimensions": [
+    {
+      "key": "empathy",
+      "label": "Empathy",
+      "description": "How you understand feelings, frustrations, and emotional signals",
+      "maxValue": 15
+    },
+    {
+      "key": "accountability",
+      "label": "Accountability",
+      "description": "How you take responsibility and drive performance outcomes",
+      "maxValue": 15
+    },
+    {
+      "key": "coaching",
+      "label": "Coaching mindset",
+      "description": "How you develop people rather than just direct them",
+      "maxValue": 15
+    },
+    {
+      "key": "directness",
+      "label": "Directness",
+      "description": "How clearly and firmly you communicate expectations",
+      "maxValue": 15
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene1",
+      "label": "Scene 1",
+      "title": "The Slipping Deadline",
+      "tag": "First reaction",
+      "body": "Your team lead approaches hesitantly: <span class=\"highlight\">“We're… behind. Again.”</span><br><br>The room feels heavy. Eyes tired. Energy low. You sense deeper issues beneath the missed timeline.",
+      "tip": "Your first move reveals your instinct under pressure.",
+      "options": [
+        {
+          "code": "1A",
+          "label": "A",
+          "main": "Confront the situation directly.",
+          "desc": "You push for immediate honesty and clarity.",
+          "deltas": { "empathy": -1, "accountability": 3, "coaching": -1, "directness": 3 }
+        },
+        {
+          "code": "1B",
+          "label": "B",
+          "main": "Ask what's blocking the team.",
+          "desc": "You diagnose before deciding.",
+          "deltas": { "empathy": 3, "accountability": 1, "coaching": 2, "directness": -1 }
+        },
+        {
+          "code": "1C",
+          "label": "C",
+          "main": "Reassign tasks to stabilise momentum.",
+          "desc": "You take structural action.",
+          "deltas": { "empathy": 0, "accountability": 2, "coaching": 1, "directness": 1 }
+        },
+        {
+          "code": "1D",
+          "label": "D",
+          "main": "Ignore it for now.",
+          "desc": "You avoid escalation, hoping tension passes.",
+          "deltas": { "empathy": 1, "accountability": -2, "coaching": 0, "directness": -2 }
+        }
+      ]
+    },
+    {
+      "id": "scene2",
+      "label": "Scene 2",
+      "title": "The Fight",
+      "tag": "Conflict style",
+      "body": "Voices rise. Two teammates erupt into argument in front of everyone. The room freezes. This conflict has been building for weeks.",
+      "tip": "Your reaction reveals emotional intelligence and authority.",
+      "options": [
+        {
+          "code": "2A",
+          "label": "A",
+          "main": "Command them to stop immediately.",
+          "desc": "You shut down escalation with authority.",
+          "deltas": { "empathy": 0, "accountability": 2, "coaching": -1, "directness": 3 }
+        },
+        {
+          "code": "2B",
+          "label": "B",
+          "main": "Mediate: help them calm down and reset.",
+          "desc": "You prioritise repair over speed.",
+          "deltas": { "empathy": 2, "accountability": 1, "coaching": 2, "directness": -1 }
+        },
+        {
+          "code": "2C",
+          "label": "C",
+          "main": "Let each share their perspective.",
+          "desc": "You choose deep understanding.",
+          "deltas": { "empathy": 3, "accountability": 1, "coaching": 3, "directness": -1 }
+        },
+        {
+          "code": "2D",
+          "label": "D",
+          "main": "Avoid getting involved.",
+          "desc": "You hope they resolve it themselves.",
+          "deltas": { "empathy": -1, "accountability": -2, "coaching": -1, "directness": -1 }
+        }
+      ]
+    },
+    {
+      "id": "scene3",
+      "label": "Scene 3",
+      "title": "The Weak Link",
+      "tag": "Performance management",
+      "body": "One staff member consistently underperforms. Errors, delays, excuses. The team is losing confidence in them, and you feel the strain.",
+      "tip": "Your choice reveals your courage and coaching instincts.",
+      "options": [
+        {
+          "code": "3A",
+          "label": "A",
+          "main": "Have a direct performance conversation.",
+          "desc": "You face the issue head-on.",
+          "deltas": { "empathy": 1, "accountability": 3, "coaching": 2, "directness": 3 }
+        },
+        {
+          "code": "3B",
+          "label": "B",
+          "main": "Begin a coaching improvement plan.",
+          "desc": "You invest in their development.",
+          "deltas": { "empathy": 3, "accountability": 1, "coaching": 3, "directness": -1 }
+        },
+        {
+          "code": "3C",
+          "label": "C",
+          "main": "Reassign them to tasks they can handle.",
+          "desc": "You redistribute load strategically.",
+          "deltas": { "empathy": 2, "accountability": 1, "coaching": 1, "directness": -1 }
+        },
+        {
+          "code": "3D",
+          "label": "D",
+          "main": "Consider replacing them.",
+          "desc": "You protect team performance long-term.",
+          "deltas": { "empathy": -2, "accountability": 2, "coaching": -2, "directness": 2 }
+        }
+      ]
+    },
+    {
+      "id": "scene4",
+      "label": "Scene 4",
+      "title": "Higher-Up Pressure",
+      "tag": "Upward leadership",
+      "body": "Your manager messages coldly: <span class=\"highlight\">“Why is your team performing poorly?”</span><br><br>The tone is sharp. Expectations are high.",
+      "tip": "Your response shows your leadership maturity.",
+      "options": [
+        {
+          "code": "4A",
+          "label": "A",
+          "main": "Own the situation.",
+          "desc": "You take full responsibility.",
+          "deltas": { "empathy": 0, "accountability": 3, "coaching": 1, "directness": 2 }
+        },
+        {
+          "code": "4B",
+          "label": "B",
+          "main": "Defend your team.",
+          "desc": "You protect morale and trust.",
+          "deltas": { "empathy": 2, "accountability": 1, "coaching": 2, "directness": -1 }
+        },
+        {
+          "code": "4C",
+          "label": "C",
+          "main": "Present a structured performance analysis.",
+          "desc": "You show clarity and strategic thinking.",
+          "deltas": { "empathy": 1, "accountability": 2, "coaching": 1, "directness": 1 }
+        },
+        {
+          "code": "4D",
+          "label": "D",
+          "main": "Give excuses.",
+          "desc": "You deflect responsibility.",
+          "deltas": { "empathy": -1, "accountability": -2, "coaching": -1, "directness": 1 }
+        }
+      ]
+    },
+    {
+      "id": "scene5",
+      "label": "Scene 5",
+      "title": "The Quitter",
+      "tag": "Retention",
+      "body": "A team member quietly approaches you: <span class=\"highlight\">“I’m thinking of leaving.”</span><br><br>This is a turning point — for them and for your leadership.",
+      "tip": "Your move shows your values around people and performance.",
+      "options": [
+        {
+          "code": "5A",
+          "label": "A",
+          "main": "Sit down and talk deeply.",
+          "desc": "You listen with presence.",
+          "deltas": { "empathy": 3, "accountability": 2, "coaching": 3, "directness": -1 }
+        },
+        {
+          "code": "5B",
+          "label": "B",
+          "main": "Let them go respectfully.",
+          "desc": "You accept their decision calmly.",
+          "deltas": { "empathy": 1, "accountability": 1, "coaching": 1, "directness": 0 }
+        },
+        {
+          "code": "5C",
+          "label": "C",
+          "main": "Explore their root concerns.",
+          "desc": "You diagnose before losing talent.",
+          "deltas": { "empathy": 3, "accountability": 1, "coaching": 2, "directness": -1 }
+        },
+        {
+          "code": "5D",
+          "label": "D",
+          "main": "\"Your choice.\"",
+          "desc": "You detach emotionally.",
+          "deltas": { "empathy": -2, "accountability": 0, "coaching": -2, "directness": 3 }
+        }
+      ]
+    },
+    {
+      "id": "scene6",
+      "label": "Scene 6",
+      "title": "Shadow You Appears",
+      "tag": "Self-confrontation",
+      "body": "A dark reflection of yourself flickers into view: <span class=\"highlight\">“You lead with heart or spine?”</span><br><br>A question that shapes your leadership identity.",
+      "tip": "Your answer reveals your core instinct.",
+      "options": [
+        {
+          "code": "6A",
+          "label": "A",
+          "main": "Heart",
+          "desc": "You lead with compassion first.",
+          "deltas": { "empathy": 3, "accountability": 1, "coaching": 3, "directness": -1 }
+        },
+        {
+          "code": "6B",
+          "label": "B",
+          "main": "Spine",
+          "desc": "You lead with firmness and authority.",
+          "deltas": { "empathy": 0, "accountability": 3, "coaching": 1, "directness": 3 }
+        },
+        {
+          "code": "6C",
+          "label": "C",
+          "main": "Balance",
+          "desc": "You combine compassion and firmness.",
+          "deltas": { "empathy": 2, "accountability": 2, "coaching": 2, "directness": 2 }
+        },
+        {
+          "code": "6D",
+          "label": "D",
+          "main": "Neither",
+          "desc": "You feel lost in leadership identity.",
+          "deltas": { "empathy": -2, "accountability": -2, "coaching": -2, "directness": -2 }
+        }
+      ]
+    },
+    {
+      "id": "scene7",
+      "label": "Scene 7",
+      "title": "The Leadership Doors",
+      "tag": "Future mindset",
+      "body": "Three doors appear, each glowing with a different energy:<br><br><strong>HEART — The Compassionate Leader</strong><br><strong>BALANCE — The Coaching-Oriented Leader</strong><br><strong>SPINE — The Command-Driven Leader</strong>",
+      "tip": "This choice reveals how you lead in the long term.",
+      "options": [
+        {
+          "code": "7H",
+          "label": "A",
+          "main": "Enter the HEART door.",
+          "desc": "You lead with compassion and emotional insight.",
+          "deltas": { "empathy": 3, "accountability": 1, "coaching": 3, "directness": -1 },
+          "end": true
+        },
+        {
+          "code": "7B",
+          "label": "B",
+          "main": "Enter the BALANCE door.",
+          "desc": "You combine empathy with firmness.",
+          "deltas": { "empathy": 2, "accountability": 2, "coaching": 2, "directness": 2 },
+          "end": true
+        },
+        {
+          "code": "7S",
+          "label": "C",
+          "main": "Enter the SPINE door.",
+          "desc": "You lead with directness and accountability.",
+          "deltas": { "empathy": 0, "accountability": 3, "coaching": 1, "directness": 3 },
+          "end": true
+        }
+      ]
+    }
+  ],
+  "archetypeSystem": {
+    "archetypes": [
+      {
+        "id": "heartLeader",
+        "label": "The Heart-Centered Leader",
+        "condition": "empathy >= 6 && coaching >= 6"
+      },
+      {
+        "id": "coach",
+        "label": "The Balanced Coach",
+        "condition": "empathy >= 4 && accountability >= 4 && directness >= 2"
+      },
+      {
+        "id": "commander",
+        "label": "The Tough Commander",
+        "condition": "directness >= 6 && accountability >= 6"
+      },
+      {
+        "id": "developer",
+        "label": "The People Developer",
+        "condition": "coaching >= 7 && empathy >= 5"
+      },
+      {
+        "id": "resolver",
+        "label": "The Conflict Resolver",
+        "condition": "coaching >= 4 && directness < 3"
+      },
+      {
+        "id": "generalist",
+        "label": "The Leadership Generalist",
+        "condition": "true"
+      }
+    ]
+  },
+  "growthSuggestions": [
+    {
+      "condition": "directness < 3 && accountability > 5",
+      "text": "You hold high standards but avoid tough conversations. Practice firmer clarity to strengthen execution."
+    },
+    {
+      "condition": "empathy > 6 && accountability < 4",
+      "text": "Your compassion is a strength — but too much softness may dilute performance. Set clearer expectations."
+    },
+    {
+      "condition": "coaching > 6 && directness < 3",
+      "text": "You nurture well but may delay hard decisions. Balance development with firmness."
+    },
+    {
+      "condition": "accountability < 3",
+      "text": "Step into stronger ownership. Your team mirrors your standards."
+    },
+    {
+      "condition": "true",
+      "text": "Your leadership shows developing balance. Continue refining how you manage conflict, clarity, and team motivation."
+    }
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "metadata": {
+    "uid": "DRPG4-Budget-Cut",
+    "title": "The Budget Cut",
+    "subtitle": "Lite",
+    "description": "Your department must reduce expenses by 20%. You must choose what to cut, what to protect, and how to defend your decisions to stakeholders — while balancing value, risk, long-term thinking, and execution realism.",
+    "hint": "Tests Value sensing, Risk tolerance, Long-term thinking, and Execution realism",
+    "difficulty": "Medium",
+    "duration": "5-7 minutes",
+    "color": "#facc15"
+  },
+  "dimensions": [
+    {
+      "key": "value",
+      "label": "Value sensing",
+      "description": "How you identify what creates true value vs noise",
+      "maxValue": 15
+    },
+    {
+      "key": "risk",
+      "label": "Risk tolerance",
+      "description": "How you balance safety, boldness, and uncertainty",
+      "maxValue": 15
+    },
+    {
+      "key": "longterm",
+      "label": "Long-term thinking",
+      "description": "How you prioritise future impact over short-term relief",
+      "maxValue": 15
+    },
+    {
+      "key": "execution",
+      "label": "Execution realism",
+      "description": "How practical, grounded, and actionable your decisions are",
+      "maxValue": 15
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene1",
+      "label": "Scene 1",
+      "title": "The 20% Decree",
+      "tag": "Initial shock",
+      "body": "The CFO enters sharply: <span class=\"highlight\">“We need 20% cuts immediately.”</span><br><br>The room goes quiet. Your budget contains people, tools, systems, and innovation bets. Every cut has consequences.",
+      "tip": "Your first cuts reveal your value hierarchy.",
+      "options": [
+        {
+          "code": "1A",
+          "label": "A",
+          "main": "Cut innovation budget.",
+          "desc": "Short-term safety over long-term growth.",
+          "deltas": { "value": -1, "risk": -1, "longterm": -2, "execution": 3 }
+        },
+        {
+          "code": "1B",
+          "label": "B",
+          "main": "Cut tools, protect people.",
+          "desc": "You preserve human capital first.",
+          "deltas": { "value": 2, "risk": 0, "longterm": 1, "execution": 1 }
+        },
+        {
+          "code": "1C",
+          "label": "C",
+          "main": "Cut people, keep essential tools.",
+          "desc": "You optimise for output efficiency.",
+          "deltas": { "value": -2, "risk": 2, "longterm": -1, "execution": 2 }
+        },
+        {
+          "code": "1D",
+          "label": "D",
+          "main": "Propose phased cuts.",
+          "desc": "You avoid rush decisions and spread the impact.",
+          "deltas": { "value": 1, "risk": 1, "longterm": 2, "execution": 2 }
+        }
+      ]
+    },
+    {
+      "id": "scene2",
+      "label": "Scene 2",
+      "title": "CFO Pressure",
+      "tag": "Stakeholder influence",
+      "body": "The CFO leans in: <span class=\"highlight\">“Why so slow? Decide now.”</span><br><br>The pressure is real — speed or strategy?",
+      "tip": "Speed reveals your risk appetite.",
+      "options": [
+        {
+          "code": "2A",
+          "label": "A",
+          "main": "Push back strongly.",
+          "desc": "You defend thoughtful cuts.",
+          "deltas": { "value": 2, "risk": 3, "longterm": 1, "execution": 0 }
+        },
+        {
+          "code": "2B",
+          "label": "B",
+          "main": "Agree fully.",
+          "desc": "You prioritise compliance and speed.",
+          "deltas": { "value": -1, "risk": -1, "longterm": 0, "execution": 2 }
+        },
+        {
+          "code": "2C",
+          "label": "C",
+          "main": "Offer a hybrid cut plan.",
+          "desc": "Balanced, structured, and defensible.",
+          "deltas": { "value": 2, "risk": 1, "longterm": 2, "execution": 2 }
+        },
+        {
+          "code": "2D",
+          "label": "D",
+          "main": "Delay the decision.",
+          "desc": "A risky attempt to buy clarity.",
+          "deltas": { "value": -1, "risk": -2, "longterm": 0, "execution": -1 }
+        }
+      ]
+    },
+    {
+      "id": "scene3",
+      "label": "Scene 3",
+      "title": "Team Protests",
+      "tag": "Internal communication",
+      "body": "Your team gathers, worried and tense: <span class=\"highlight\">“Are these cuts going to destroy us?”</span><br><br>They fear losing tools, people, or stability.",
+      "tip": "Your response reveals emotional and strategic calibration.",
+      "options": [
+        {
+          "code": "3A",
+          "label": "A",
+          "main": "Explain strategy transparently.",
+          "desc": "You bring clarity and context.",
+          "deltas": { "value": 2, "risk": 0, "longterm": 2, "execution": 1 }
+        },
+        {
+          "code": "3B",
+          "label": "B",
+          "main": "Hide details.",
+          "desc": "You avoid panic, but reduce trust.",
+          "deltas": { "value": -1, "risk": 0, "longterm": -1, "execution": 1 }
+        },
+        {
+          "code": "3C",
+          "label": "C",
+          "main": "Adjust based on feedback.",
+          "desc": "You adapt in real-time.",
+          "deltas": { "value": 1, "risk": 1, "longterm": 1, "execution": 2 }
+        },
+        {
+          "code": "3D",
+          "label": "D",
+          "main": "Ignore complaints.",
+          "desc": "You focus on results over morale.",
+          "deltas": { "value": -2, "risk": 1, "longterm": -1, "execution": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene4",
+      "label": "Scene 4",
+      "title": "CEO Demands Justification",
+      "tag": "Upward accountability",
+      "body": "The CEO calls you in: <span class=\"highlight\">“Explain why you cut what you cut.”</span><br><br>Your reasoning must align with the company’s future direction.",
+      "tip": "This tests your strategic lens.",
+      "options": [
+        {
+          "code": "4A",
+          "label": "A",
+          "main": "Long-term ROI argument.",
+          "desc": "You protect future value.",
+          "deltas": { "value": 2, "risk": 0, "longterm": 3, "execution": 1 }
+        },
+        {
+          "code": "4B",
+          "label": "B",
+          "main": "Short-term savings emphasis.",
+          "desc": "You favour immediate wins.",
+          "deltas": { "value": 0, "risk": -1, "longterm": -1, "execution": 3 }
+        },
+        {
+          "code": "4C",
+          "label": "C",
+          "main": "Balanced resource argument.",
+          "desc": "You justify with both short and long-term goals.",
+          "deltas": { "value": 2, "risk": 1, "longterm": 2, "execution": 2 }
+        },
+        {
+          "code": "4D",
+          "label": "D",
+          "main": "Emotional appeal.",
+          "desc": "You rely on sentiment rather than strategy.",
+          "deltas": { "value": -1, "risk": 0, "longterm": 0, "execution": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene5",
+      "label": "Scene 5",
+      "title": "The Trade Deal",
+      "tag": "Cross-department negotiation",
+      "body": "Another department reaches out: <span class=\"highlight\">“We can share resources if you share yours.”</span><br><br>It’s an unexpected offer — with hidden implications.",
+      "tip": "Your response shows your negotiation instinct.",
+      "options": [
+        {
+          "code": "5A",
+          "label": "A",
+          "main": "Accept quickly.",
+          "desc": "You optimise speed and benefit.",
+          "deltas": { "value": 1, "risk": 2, "longterm": 0, "execution": 2 }
+        },
+        {
+          "code": "5B",
+          "label": "B",
+          "main": "Analyze deeply first.",
+          "desc": "You prioritise due diligence.",
+          "deltas": { "value": 3, "risk": 0, "longterm": 2, "execution": 1 }
+        },
+        {
+          "code": "5C",
+          "label": "C",
+          "main": "Reject the offer.",
+          "desc": "You protect internal autonomy.",
+          "deltas": { "value": -1, "risk": 1, "longterm": 0, "execution": 1 }
+        },
+        {
+          "code": "5D",
+          "label": "D",
+          "main": "Negotiate upward.",
+          "desc": "You push for expanded gains.",
+          "deltas": { "value": 2, "risk": 2, "longterm": 2, "execution": 1 }
+        }
+      ]
+    },
+    {
+      "id": "scene6",
+      "label": "scene6",
+      "title": "Shadow You Appears",
+      "tag": "Self-confrontation",
+      "body": "A shadow version of you whispers: <span class=\"highlight\">“Do you choose cost… or value?”</span><br><br>Your philosophy is about to be tested.",
+      "tip": "This reveals your core prioritization identity.",
+      "options": [
+        {
+          "code": "6A",
+          "label": "A",
+          "main": "Value-first decisions.",
+          "desc": "You optimise around long-term value creation.",
+          "deltas": { "value": 4, "risk": 1, "longterm": 3, "execution": 1 }
+        },
+        {
+          "code": "6B",
+          "label": "B",
+          "main": "Cost-first decisions.",
+          "desc": "You reduce risk through aggressive cuts.",
+          "deltas": { "value": -2, "risk": -1, "longterm": -1, "execution": 4 }
+        },
+        {
+          "code": "6C",
+          "label": "C",
+          "main": "Balanced decisions.",
+          "desc": "You weigh value and cost equally.",
+          "deltas": { "value": 2, "risk": 2, "longterm": 2, "execution": 2 }
+        },
+        {
+          "code": "6D",
+          "label": "D",
+          "main": "Avoid choosing.",
+          "desc": "You freeze under pressure.",
+          "deltas": { "value": -2, "risk": -2, "longterm": -2, "execution": -1 }
+        }
+      ]
+    },
+    {
+      "id": "scene7",
+      "label": "scene7",
+      "title": "Final Strategy Door",
+      "tag": "Future direction",
+      "body": "Three doors glow ahead:<br><br><strong>VALUE — Protect what matters</strong><br><strong>BALANCE — Smart trade-offs</strong><br><strong>SAFETY — Stable, conservative choices</strong>",
+      "tip": "This final door summarises your strategic identity.",
+      "options": [
+        {
+          "code": "7VALUE",
+          "label": "A",
+          "main": "Choose VALUE.",
+          "desc": "You prioritise long-term impact above all.",
+          "deltas": { "value": 4, "risk": 1, "longterm": 3, "execution": 1 },
+          "end": true
+        },
+        {
+          "code": "7BAL",
+          "label": "B",
+          "main": "Choose BALANCE.",
+          "desc": "You blend ambition with safety.",
+          "deltas": { "value": 2, "risk": 2, "longterm": 2, "execution": 2 },
+          "end": true
+        },
+        {
+          "code": "7SAFE",
+          "label": "C",
+          "main": "Choose SAFETY.",
+          "desc": "You optimise for stability and predictability.",
+          "deltas": { "value": -1, "risk": -2, "longterm": 1, "execution": 3 },
+          "end": true
+        }
+      ]
+    }
+  ],
+  "archetypeSystem": {
+    "archetypes": [
+      {
+        "id": "valueArchitect",
+        "label": "The Value Architect",
+        "condition": "value >= 6 && longterm >= 6"
+      },
+      {
+        "id": "riskNavigator",
+        "label": "The Risk Navigator",
+        "condition": "risk >= 6 && execution >= 4"
+      },
+      {
+        "id": "strategicBalancer",
+        "label": "The Strategic Balancer",
+        "condition": "value >= 4 && risk >= 4 && longterm >= 4"
+      },
+      {
+        "id": "practicalOperator",
+        "label": "The Practical Operator",
+        "condition": "execution >= 6 && longterm < 4"
+      },
+      {
+        "id": "costDefender",
+        "label": "The Cost Defender",
+        "condition": "value < 3 && risk < 3"
+      },
+      {
+        "id": "generalist",
+        "label": "The Budget Generalist",
+        "condition": "true"
+      }
+    ]
+  },
+  "growthSuggestions": [
+    {
+      "condition": "risk < 3 && execution > 4",
+      "text": "You make safe and realistic decisions. Explore slightly bolder moves to unlock value."
+    },
+    {
+      "condition": "value < 4 && longterm < 4",
+      "text": "You may under-prioritise future growth. Strengthen strategic thinking to avoid over-cutting."
+    },
+    {
+      "condition": "execution < 3",
+      "text": "Your ideas may lack practicality. Tighten execution realism before committing."
+    },
+    {
+      "condition": "longterm > 6 && execution < 4",
+      "text": "You see far ahead, but plans may be hard to implement. Balance ambition with operational detail."
+    },
+    {
+      "condition": "true",
+      "text": "Your budget mindset shows developing balance. Track your cut patterns to strengthen future resource decisions."
+    }
+  ]
+}

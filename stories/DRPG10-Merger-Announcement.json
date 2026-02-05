@@ -1,0 +1,366 @@
+{
+  "metadata": {
+    "uid": "DRPG10-Merger-Announcement",
+    "title": "The Merger Announcement",
+    "subtitle": "Lite",
+    "description": "Your company merges with a competitor. Roles blur, influence shifts, and survival instincts rise. Every choice reveals how you navigate uncertainty, shifting power, visibility, and loyalty in a politically charged transition.",
+    "hint": "Tests Power Dynamics Intelligence, Change Adaptability, Team Loyalty, and Visibility Strategy.",
+    "difficulty": "Medium",
+    "duration": "6-9 minutes",
+    "color": "#6366f1"
+  },
+  "dimensions": [
+    {
+      "key": "pd",
+      "label": "Power Dynamics Intelligence",
+      "description": "Your ability to sense alliances, hidden agendas, and shifting influence during uncertain transitions.",
+      "maxValue": 12
+    },
+    {
+      "key": "ca",
+      "label": "Change Adaptability",
+      "description": "How you interpret and adapt to ambiguity, shifting structures, and organizational disruption.",
+      "maxValue": 15
+    },
+    {
+      "key": "loyalty",
+      "label": "Loyalty Orientation",
+      "description": "How you balance team protection, self-preservation, and shared responsibility.",
+      "maxValue": 15
+    },
+    {
+      "key": "visibility",
+      "label": "Visibility Strategy",
+      "description": "How you manage influence, visibility, and presence during organizational change.",
+      "maxValue": 12
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene1",
+      "label": "Scene 1",
+      "title": "The Rumor Begins",
+      "tag": "Trust under uncertainty",
+      "body": "9:42 AM. A colleague whispers:<br><br><span class=\"highlight\">“Leadership has been in closed meetings all week. Something big is happening.”</span><br><br>Your inbox instantly pings with a mandatory all-hands invite for 2 PM.",
+      "tip": "Your first instinct reveals how you calibrate trust and information.",
+      "options": [
+        {
+          "code": "1A",
+          "label": "A",
+          "main": "Ask for details immediately.",
+          "desc": "You verify sources and map the information flow.",
+          "deltas": { "pd": 2, "ca": 0, "loyalty": 0, "visibility": 1 }
+        },
+        {
+          "code": "1B",
+          "label": "B",
+          "main": "“We’ll know at 2. No point guessing.”",
+          "desc": "You wait for official clarity.",
+          "deltas": { "pd": 0, "ca": 2, "loyalty": 0, "visibility": 0 }
+        },
+        {
+          "code": "1C",
+          "label": "C",
+          "main": "Share observations cautiously.",
+          "desc": "You participate without overcommitting.",
+          "deltas": { "pd": 1, "ca": 1, "loyalty": 1, "visibility": 0 }
+        },
+        {
+          "code": "1D",
+          "label": "D",
+          "main": "Search online for merger rumors.",
+          "desc": "You gather intelligence independently.",
+          "deltas": { "pd": 2, "ca": 0, "loyalty": 0, "visibility": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene2",
+      "label": "Scene 2",
+      "title": "The Announcement",
+      "tag": "Change adaptability",
+      "body": "2:00 PM. The CEO appears on screen, composed but tense.<br><br><span class=\"highlight\">“We are merging with TechCore. Integration begins next month.”</span><br><br>The call ends. Silence fills the room.",
+      "tip": "Your reaction shows how you frame major transitions.",
+      "options": [
+        {
+          "code": "2A",
+          "label": "A",
+          "main": "See the merger as opportunity.",
+          "desc": "Optimism guides your interpretation.",
+          "deltas": { "pd": 0, "ca": 3, "loyalty": 0, "visibility": 1 }
+        },
+        {
+          "code": "2B",
+          "label": "B",
+          "main": "Assess the impact on your role.",
+          "desc": "You analyze personal risk first.",
+          "deltas": { "pd": 1, "ca": 1, "loyalty": -1, "visibility": 0 }
+        },
+        {
+          "code": "2C",
+          "label": "C",
+          "main": "Focus on missing details.",
+          "desc": "You spot uncertainty and blind spots.",
+          "deltas": { "pd": 1, "ca": 0, "loyalty": 0, "visibility": 0 }
+        },
+        {
+          "code": "2D",
+          "label": "D",
+          "main": "Think about how the team will cope.",
+          "desc": "You shift into group-oriented thinking.",
+          "deltas": { "pd": 0, "ca": 1, "loyalty": 2, "visibility": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene3",
+      "label": "Scene 3",
+      "title": "The Alliance Proposal",
+      "tag": "Power dynamics",
+      "body": "Hours later, three colleagues approach you privately:<br><br><span class=\"highlight\">“We should form a group. Share information. Protect each other.”</span>",
+      "tip": "Your decision shows how you navigate informal alliances.",
+      "options": [
+        {
+          "code": "3A",
+          "label": "A",
+          "main": "Join the coalition.",
+          "desc": "You align with emerging power clusters.",
+          "deltas": { "pd": 3, "ca": 0, "loyalty": 1, "visibility": 1 }
+        },
+        {
+          "code": "3B",
+          "label": "B",
+          "main": "Wait for official guidance.",
+          "desc": "You prioritize structure over speculation.",
+          "deltas": { "pd": 0, "ca": 2, "loyalty": 0, "visibility": 0 }
+        },
+        {
+          "code": "3C",
+          "label": "C",
+          "main": "Stay loosely connected but uncommitted.",
+          "desc": "You preserve optionality.",
+          "deltas": { "pd": 2, "ca": 1, "loyalty": 0, "visibility": 1 }
+        },
+        {
+          "code": "3D",
+          "label": "D",
+          "main": "Navigate the merger independently.",
+          "desc": "You avoid entanglement.",
+          "deltas": { "pd": 1, "ca": 1, "loyalty": -1, "visibility": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene4",
+      "label": "Scene 4",
+      "title": "The Insider Warning",
+      "tag": "Self-preservation vs collective good",
+      "body": "That night, your manager messages you privately:<br><br><span class=\"highlight\">“Restructuring is real. Be visible. Document your wins.”</span>",
+      "tip": "Your response shows how you balance personal effort and team loyalty.",
+      "options": [
+        {
+          "code": "4A",
+          "label": "A",
+          "main": "Act immediately and secure your advantage.",
+          "desc": "You put yourself first.",
+          "deltas": { "pd": 2, "ca": 1, "loyalty": -1, "visibility": 2 }
+        },
+        {
+          "code": "4B",
+          "label": "B",
+          "main": "Share the warning with a teammate.",
+          "desc": "You extend your safety net outward.",
+          "deltas": { "pd": 1, "ca": 0, "loyalty": 2, "visibility": 0 }
+        },
+        {
+          "code": "4C",
+          "label": "C",
+          "main": "Ask if you can share this info.",
+          "desc": "You test boundaries transparently.",
+          "deltas": { "pd": 1, "ca": 1, "loyalty": 1, "visibility": 0 }
+        },
+        {
+          "code": "4D",
+          "label": "D",
+          "main": "Wait for official details before acting.",
+          "desc": "You hold information cautiously.",
+          "deltas": { "pd": 0, "ca": 1, "loyalty": 0, "visibility": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene5",
+      "label": "Scene 5",
+      "title": "The Team Question",
+      "tag": "Loyalty under pressure",
+      "body": "Next morning. The team gathers. Someone asks:<br><br><span class=\"highlight\">“Do you know anything? Are our jobs safe?”</span>",
+      "tip": "Your choice reveals your loyalty pattern.",
+      "options": [
+        {
+          "code": "5A",
+          "label": "A",
+          "main": "“We’re in this together.”",
+          "desc": "You maintain equality and unity.",
+          "deltas": { "pd": 0, "ca": 0, "loyalty": 3, "visibility": 0 }
+        },
+        {
+          "code": "5B",
+          "label": "B",
+          "main": "“There may be changes. Let’s stay strong.”",
+          "desc": "You hint without revealing specifics.",
+          "deltas": { "pd": 1, "ca": 1, "loyalty": 1, "visibility": 0 }
+        },
+        {
+          "code": "5C",
+          "label": "C",
+          "main": "Share emotional truth but not details.",
+          "desc": "You emphasize solidarity, not information.",
+          "deltas": { "pd": 0, "ca": 1, "loyalty": 2, "visibility": 0 }
+        },
+        {
+          "code": "5D",
+          "label": "D",
+          "main": "Defer to leadership’s communication.",
+          "desc": "You choose informational neutrality.",
+          "deltas": { "pd": 1, "ca": 1, "loyalty": 0, "visibility": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene6",
+      "label": "Scene 6",
+      "title": "The Visibility Moment",
+      "tag": "Strategic visibility",
+      "body": "A major integration meeting is coming. Leadership will attend. High visibility, high stakes.",
+      "tip": "Visibility becomes strategy in mergers.",
+      "options": [
+        {
+          "code": "6A",
+          "label": "A",
+          "main": "Volunteer to present your team’s wins.",
+          "desc": "You seize public visibility.",
+          "deltas": { "pd": 1, "ca": 1, "loyalty": 0, "visibility": 3 }
+        },
+        {
+          "code": "6B",
+          "label": "B",
+          "main": "Speak only when relevant.",
+          "desc": "You choose balanced visibility.",
+          "deltas": { "pd": 1, "ca": 1, "loyalty": 0, "visibility": 1 }
+        },
+        {
+          "code": "6C",
+          "label": "C",
+          "main": "Attend quietly and focus on execution.",
+          "desc": "You rely on merit over airtime.",
+          "deltas": { "pd": 0, "ca": 1, "loyalty": 0, "visibility": 0 }
+        },
+        {
+          "code": "6D",
+          "label": "D",
+          "main": "Send your ideas privately to leadership.",
+          "desc": "You influence behind the scenes.",
+          "deltas": { "pd": 2, "ca": 1, "loyalty": 0, "visibility": 2 }
+        }
+      ]
+    },
+    {
+      "id": "scene7",
+      "label": "Scene 7",
+      "title": "The Transition Decision",
+      "tag": "Change response profile",
+      "body": "Leadership calls you in:<br><br><span class=\"highlight\">“Your role is changing. A new division awaits, or a lateral move if you prefer stability.”</span>",
+      "tip": "Your path forward defines your change arc.",
+      "options": [
+        {
+          "code": "7SAFE",
+          "label": "A",
+          "main": "Accept immediately.",
+          "desc": "You embrace the unknown with confidence.",
+          "deltas": { "pd": 0, "ca": 3, "loyalty": 0, "visibility": 1 },
+          "end": true
+        },
+        {
+          "code": "7SMART",
+          "label": "B",
+          "main": "Request time to evaluate.",
+          "desc": "You seek clarity before moving.",
+          "deltas": { "pd": 1, "ca": 2, "loyalty": 0, "visibility": 0 },
+          "end": true
+        },
+        {
+          "code": "7BRAVE",
+          "label": "C",
+          "main": "Negotiate expectations and support.",
+          "desc": "You set boundaries before committing.",
+          "deltas": { "pd": 2, "ca": 2, "loyalty": 0, "visibility": 1 },
+          "end": true
+        },
+        {
+          "code": "7EXIT",
+          "label": "D",
+          "main": "Decline and explore roles outside.",
+          "desc": "You choose autonomy over adaptation.",
+          "deltas": { "pd": 1, "ca": 0, "loyalty": -1, "visibility": 0 },
+          "end": true
+        }
+      ]
+    }
+  ],
+  "archetypeSystem": {
+    "archetypes": [
+      {
+        "id": "navigator",
+        "label": "The Power Navigator",
+        "condition": "pd >= 5 && visibility >= 4"
+      },
+      {
+        "id": "harmonizer",
+        "label": "The Harmonizer",
+        "condition": "loyalty >= 5 && pd < 4"
+      },
+      {
+        "id": "stabilizer",
+        "label": "The Stabilizer",
+        "condition": "ca >= 5 && visibility < 3"
+      },
+      {
+        "id": "strategist",
+        "label": "The Strategist",
+        "condition": "pd >= 4 && ca >= 4"
+      },
+      {
+        "id": "independent",
+        "label": "The Independent",
+        "condition": "loyalty < 2 && pd >= 3"
+      },
+      {
+        "id": "balanced",
+        "label": "The Adaptive Integrator",
+        "condition": "true"
+      }
+    ]
+  },
+  "growthSuggestions": [
+    {
+      "condition": "pd < 3",
+      "text": "You may overlook subtle influence patterns. Strengthen your ability to read alliances and informal power structures."
+    },
+    {
+      "condition": "ca < 4",
+      "text": "Large transitions feel destabilizing. Build habits that help you reframe disruption as possibility."
+    },
+    {
+      "condition": "loyalty > 5",
+      "text": "Your strong team loyalty can lead to self-sacrifice. Balance care with self-preservation."
+    },
+    {
+      "condition": "visibility < 2",
+      "text": "You may underestimate the importance of being seen. Strategic visibility protects your role during transitions."
+    },
+    {
+      "condition": "true",
+      "text": "You are learning to navigate complexity with increasing maturity. Continue refining your influence and adaptability."
+    }
+  ]
+}

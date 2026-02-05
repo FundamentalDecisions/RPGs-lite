@@ -1,0 +1,366 @@
+{
+  "metadata": {
+    "uid": "DRPG12-Toxic-Star-Performer",
+    "title": "The Toxic Star Performer",
+    "subtitle": "Lite",
+    "description": "A high-performing individual begins eroding team culture. You must navigate results, boundaries, and long-term team health while balancing courage, system thinking, and psychological safety restoration.",
+    "hint": "Tests your systemic leadership, boundary-setting courage, psychological safety intelligence, and accountability consistency under pressure.",
+    "difficulty": "Medium",
+    "duration": "8-12 minutes",
+    "color": "#ef4444"
+  },
+  "dimensions": [
+    {
+      "key": "SL",
+      "label": "System Leadership Thinking",
+      "description": "How you prioritize long-term team health over individual heroics.",
+      "maxValue": 15
+    },
+    {
+      "key": "CS",
+      "label": "Courageous Standards",
+      "description": "Your ability to set firm behavioural boundaries even with star performers.",
+      "maxValue": 12
+    },
+    {
+      "key": "PS",
+      "label": "Psychological Safety Intelligence",
+      "description": "How you sense, respond to, and rebuild psychological safety across the team.",
+      "maxValue": 12
+    },
+    {
+      "key": "AC",
+      "label": "Accountability Consistency",
+      "description": "How consistently you enforce expectations regardless of performance level.",
+      "maxValue": 12
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene1",
+      "label": "Scene 1",
+      "title": "The Standup Signal",
+      "tag": "Early Warning",
+      "body": "The morning standup ends. The star performer highlights their ahead-of-schedule progress and subtly implies the team should \"move faster.\" The air gets heavy; a few teammates stop engaging.",
+      "tip": "Your first response influences whether people feel safe to speak up.",
+      "options": [
+        {
+          "code": "1A",
+          "label": "A",
+          "main": "Praise the milestone and move the meeting forward.",
+          "desc": "You maintain momentum but ignore the cultural impact.",
+          "deltas": { "SL": -1, "CS": -1, "PS": -1, "AC": 0 }
+        },
+        {
+          "code": "1B",
+          "label": "B",
+          "main": "Acknowledge the win, but shift focus to shared dependencies.",
+          "desc": "You redirect the room back to collective progress.",
+          "deltas": { "SL": 2, "CS": 1, "PS": 2, "AC": 1 }
+        },
+        {
+          "code": "1C",
+          "label": "C",
+          "main": "Invite another teammate to share their blockers.",
+          "desc": "You re-balance voice in the room.",
+          "deltas": { "SL": 1, "CS": 1, "PS": 2, "AC": 1 }
+        },
+        {
+          "code": "1D",
+          "label": "D",
+          "main": "End the standup early and plan to handle this privately.",
+          "desc": "Avoids conflict but sidelines immediate psychological safety.",
+          "deltas": { "SL": 0, "CS": -1, "PS": -1, "AC": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene2",
+      "label": "Scene 2",
+      "title": "The Avoidance Pattern",
+      "tag": "Team Dynamics Shift",
+      "body": "Two teammates quietly request to be removed from a shared task with the star performer. They claim efficiency, but their tone reveals discomfort.",
+      "tip": "Avoidance is a symptom of systemic stress.",
+      "options": [
+        {
+          "code": "2A",
+          "label": "A",
+          "main": "Approve the change to reduce friction quickly.",
+          "desc": "Short-term delivery takes priority over structural health.",
+          "deltas": { "SL": -2, "CS": -1, "PS": -1, "AC": -1 }
+        },
+        {
+          "code": "2B",
+          "label": "B",
+          "main": "Ask them to resolve the issue directly with the star performer.",
+          "desc": "You promote ownership but avoid investigating the root cause.",
+          "deltas": { "SL": 0, "CS": 1, "PS": 0, "AC": 1 }
+        },
+        {
+          "code": "2C",
+          "label": "C",
+          "main": "Pause changes and explore what's really happening.",
+          "desc": "You step into systemic leadership and diagnosis mode.",
+          "deltas": { "SL": 3, "CS": 2, "PS": 2, "AC": 2 }
+        },
+        {
+          "code": "2D",
+          "label": "D",
+          "main": "Assign full ownership of the task to the star performer.",
+          "desc": "You isolate the tension instead of resolving it.",
+          "deltas": { "SL": -1, "CS": -1, "PS": -2, "AC": -1 }
+        }
+      ]
+    },
+    {
+      "id": "scene3",
+      "label": "Scene 3",
+      "title": "The One-on-One",
+      "tag": "Boundary Setting",
+      "body": "In a private check-in, the star performer says, \"I hit my targets. If others can’t keep up, that’s on them.\" They see results, not impact.",
+      "tip": "Behavioral boundaries matter as much as performance standards.",
+      "options": [
+        {
+          "code": "3A",
+          "label": "A",
+          "main": "Focus only on outputs and reinforce their speed.",
+          "desc": "Performance praised at the cost of culture.",
+          "deltas": { "SL": -2, "CS": -2, "PS": -1, "AC": -2 }
+        },
+        {
+          "code": "3B",
+          "label": "B",
+          "main": "Suggest that collaboration helps team success long-term.",
+          "desc": "You offer a soft nudge without accountability.",
+          "deltas": { "SL": 1, "CS": 0, "PS": 1, "AC": 0 }
+        },
+        {
+          "code": "3C",
+          "label": "C",
+          "main": "Name the behavioral impact and set clear expectations.",
+          "desc": "Direct, courageous, and system-first.",
+          "deltas": { "SL": 3, "CS": 3, "PS": 2, "AC": 3 }
+        },
+        {
+          "code": "3D",
+          "label": "D",
+          "main": "Warn them that complaints are emerging.",
+          "desc": "Accountability through implied escalation.",
+          "deltas": { "SL": 1, "CS": 2, "PS": 0, "AC": 2 }
+        }
+      ]
+    },
+    {
+      "id": "scene4",
+      "label": "Scene 4",
+      "title": "The Team Temperature",
+      "tag": "Psychological Safety",
+      "body": "Team creativity dips. Conversations feel cautious. People optimize for safety, not excellence.",
+      "tip": "Psychological safety is a leading indicator of long-term performance.",
+      "options": [
+        {
+          "code": "4A",
+          "label": "A",
+          "main": "Push harder on goals to re-energize performance.",
+          "desc": "You raise pressure instead of addressing root fears.",
+          "deltas": { "SL": -2, "CS": 0, "PS": -2, "AC": 0 }
+        },
+        {
+          "code": "4B",
+          "label": "B",
+          "main": "Run a team reset session on collaboration norms.",
+          "desc": "You take systemic action to restore culture.",
+          "deltas": { "SL": 2, "CS": 1, "PS": 3, "AC": 1 }
+        },
+        {
+          "code": "4C",
+          "label": "C",
+          "main": "Ignore the signals until performance drops.",
+          "desc": "A reactive approach that risks deeper cultural damage.",
+          "deltas": { "SL": -1, "CS": -1, "PS": -1, "AC": -1 }
+        },
+        {
+          "code": "4D",
+          "label": "D",
+          "main": "Remove the star from cross-team work.",
+          "desc": "You reduce impact radius but avoid deeper correction.",
+          "deltas": { "SL": 1, "CS": 1, "PS": 1, "AC": 1 }
+        }
+      ]
+    },
+    {
+      "id": "scene5",
+      "label": "Scene 5",
+      "title": "Pressure From Above",
+      "tag": "Leadership Courage",
+      "body": "Your manager remarks: \"Whatever you're doing — don't break it.\" Results are visible; culture is not.",
+      "tip": "Leaders often reward the visible, not the sustainable.",
+      "options": [
+        {
+          "code": "5A",
+          "label": "A",
+          "main": "Interpret this as permission to let culture issues slide.",
+          "desc": "Short-term comfort over long-term integrity.",
+          "deltas": { "SL": -2, "CS": -2, "PS": -1, "AC": -2 }
+        },
+        {
+          "code": "5B",
+          "label": "B",
+          "main": "Raise the cultural risks despite strong numbers.",
+          "desc": "You display leadership courage and systemic awareness.",
+          "deltas": { "SL": 2, "CS": 3, "PS": 1, "AC": 3 }
+        },
+        {
+          "code": "5C",
+          "label": "C",
+          "main": "Ask for managerial support to reset expectations.",
+          "desc": "You seek alignment to drive sustainable culture change.",
+          "deltas": { "SL": 2, "CS": 2, "PS": 1, "AC": 2 }
+        },
+        {
+          "code": "5D",
+          "label": "D",
+          "main": "Say nothing and attempt to manage it alone.",
+          "desc": "You act but without strategic support.",
+          "deltas": { "SL": 0, "CS": 1, "PS": 0, "AC": 1 }
+        }
+      ]
+    },
+    {
+      "id": "scene6",
+      "label": "Scene 6",
+      "title": "Shadow You",
+      "tag": "Self-Honesty",
+      "body": "A quiet truth surfaces: part of you likes having a star. It boosts performance — and your reputation. Confronting them risks discomfort and outcomes you can't control.",
+      "tip": "This is a mirror for your real leadership intent.",
+      "options": [
+        {
+          "code": "6A",
+          "label": "A",
+          "main": "Accept the trade-off. Results justify the risk.",
+          "desc": "Comfort and performance overshadow culture.",
+          "deltas": { "SL": -2, "CS": -2, "PS": -1, "AC": -2 }
+        },
+        {
+          "code": "6B",
+          "label": "B",
+          "main": "Delay until damage is undeniable.",
+          "desc": "Avoidance disguised as caution.",
+          "deltas": { "SL": -1, "CS": -1, "PS": -1, "AC": -1 }
+        },
+        {
+          "code": "6C",
+          "label": "C",
+          "main": "Admit that you’re avoiding discomfort and need to act.",
+          "desc": "You choose responsibility over ego protection.",
+          "deltas": { "SL": 3, "CS": 3, "PS": 2, "AC": 3 }
+        },
+        {
+          "code": "6D",
+          "label": "D",
+          "main": "Blame the team: they should adapt.",
+          "desc": "Shifts responsibility away from systemic leadership.",
+          "deltas": { "SL": -1, "CS": -1, "PS": -2, "AC": -1 }
+        }
+      ]
+    },
+    {
+      "id": "scene7",
+      "label": "Scene 7",
+      "title": "Final Door",
+      "tag": "System Definition",
+      "body": "Your next move will define how success works on your team. Not for one person — for everyone.",
+      "tip": "This ending reveals your culture-performance balance under pressure.",
+      "options": [
+        {
+          "code": "7A",
+          "label": "A",
+          "main": "Make collaboration a formal performance expectation.",
+          "desc": "You hard-wire systemic excellence and cultural clarity.",
+          "deltas": { "SL": 4, "CS": 3, "PS": 3, "AC": 3 },
+          "end": true
+        },
+        {
+          "code": "7B",
+          "label": "B",
+          "main": "Create parallel tracks: solo excellence and team delivery.",
+          "desc": "A hybrid compromise that maintains options but diffuses standards.",
+          "deltas": { "SL": 1, "CS": 1, "PS": 0, "AC": 1 },
+          "end": true
+        },
+        {
+          "code": "7C",
+          "label": "C",
+          "main": "Keep expectations implicit and manage tensions case-by-case.",
+          "desc": "Flexible but fragile, reliant on your continuous intervention.",
+          "deltas": { "SL": 0, "CS": 0, "PS": 0, "AC": 0 },
+          "end": true
+        },
+        {
+          "code": "7D",
+          "label": "D",
+          "main": "Let results overshadow culture until issues are undeniable.",
+          "desc": "You choose short-term comfort over systemic stewardship.",
+          "deltas": { "SL": -3, "CS": -2, "PS": -2, "AC": -2 },
+          "end": true
+        }
+      ]
+    }
+  ],
+  "archetypeSystem": {
+    "archetypes": [
+      {
+        "id": "system_guardian",
+        "label": "The System Guardian",
+        "condition": "SL >= 6 && PS >= 5"
+      },
+      {
+        "id": "courageous_steward",
+        "label": "The Courageous Steward",
+        "condition": "CS >= 6 && AC >= 6"
+      },
+      {
+        "id": "safety_architect",
+        "label": "The Safety Architect",
+        "condition": "PS >= 6 && AC < 5"
+      },
+      {
+        "id": "pragmatic_balancer",
+        "label": "The Pragmatic Balancer",
+        "condition": "SL >= 4 && CS >= 3"
+      },
+      {
+        "id": "performance_biased",
+        "label": "The Performance-Biased Leader",
+        "condition": "SL < 2 && CS < 2"
+      },
+      {
+        "id": "adaptive_manager",
+        "label": "The Adaptive Manager",
+        "condition": "true"
+      }
+    ]
+  },
+  "growthSuggestions": [
+    {
+      "condition": "CS < 3 && SL > 5",
+      "text": "Your strategic awareness is strong, but your boundary-setting can be clearer. High performers need firm standards too."
+    },
+    {
+      "condition": "PS < 3 && SL > 4",
+      "text": "You prioritize results, but restoring psychological safety will unlock deeper team performance."
+    },
+    {
+      "condition": "AC < 4 && CS > 5",
+      "text": "You attempt courageous action, but consistency is where trust grows. Apply standards evenly across roles."
+    },
+    {
+      "condition": "SL < 3",
+      "text": "Consider shifting from individual performance focus to system-first leadership. Long-term excellence depends on collective strength."
+    },
+    {
+      "condition": "true",
+      "text": "Your leadership shows promising balance. Continue refining how you hold high performers accountable while elevating the whole system."
+    }
+  ]
+}

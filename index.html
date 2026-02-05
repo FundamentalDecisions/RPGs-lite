@@ -1,0 +1,1947 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>RPG Collection@ TeamFD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        --bg: #050816;
+        --bg-alt: #0b1020;
+        --card: #111827;
+        --accent: #38bdf8;
+        --accent-soft: rgba(56, 189, 248, 0.15);
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --danger: #f97373;
+        --success: #4ade80;
+        --radius-lg: 18px;
+        --radius-md: 10px;
+        --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.4);
+        --transition-fast: 0.18s ease-out;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          sans-serif;
+        background: radial-gradient(
+          circle at top,
+          #111827 0,
+          #020617 45%,
+          #000 100%
+        );
+        color: var(--text);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 24px 12px;
+      }
+
+      .app {
+        width: 100%;
+        max-width: 960px;
+        background: linear-gradient(
+          145deg,
+          rgba(15, 23, 42, 0.92),
+          rgba(15, 23, 42, 0.98)
+        );
+        border-radius: 26px;
+        box-shadow: var(--shadow-soft);
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        padding: 24px 20px 28px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      @media (min-width: 768px) {
+        .app {
+          padding: 28px 32px 36px;
+        }
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      header.app-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+
+      .title-block {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .app-title {
+        font-size: 1.4rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .badge {
+        font-size: 0.72rem;
+        padding: 2px 8px;
+        border-radius: 999px;
+        background: rgba(34, 197, 94, 0.15);
+        border: 1px solid rgba(34, 197, 94, 0.4);
+        color: #bbf7d0;
+      }
+
+      .subtitle {
+        font-size: 0.88rem;
+        color: var(--muted);
+      }
+
+      .progress-pill {
+        font-size: 0.78rem;
+        border-radius: 999px;
+        padding: 6px 12px;
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(148, 163, 184, 0.4);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      .progress-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 10px rgba(56, 189, 248, 0.7);
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .card {
+        background: radial-gradient(
+          circle at top left,
+          rgba(56, 189, 248, 0.12),
+          rgba(15, 23, 42, 0.92)
+        );
+        border-radius: var(--radius-lg);
+        border: 1px solid rgba(148, 163, 184, 0.3);
+        padding: 18px 16px 18px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      @media (min-width: 768px) {
+        .card {
+          padding: 22px 22px 20px;
+        }
+      }
+
+      .card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at top left,
+          rgba(56, 189, 248, 0.16),
+          transparent 55%
+        );
+        opacity: 0.7;
+        pointer-events: none;
+      }
+
+      .card-inner {
+        position: relative;
+        z-index: 1;
+      }
+
+      .scene-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+        font-size: 0.8rem;
+        color: var(--muted);
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .scene-title {
+        font-size: 1.02rem;
+        font-weight: 600;
+        margin-bottom: 6px;
+        letter-spacing: 0.01em;
+      }
+
+      .scene-body {
+        font-size: 0.92rem;
+        line-height: 1.5;
+        color: #e5e7f0;
+        margin-bottom: 12px;
+      }
+
+      .scene-body span.highlight {
+        color: #bae6fd;
+      }
+
+      .choices {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 4px;
+      }
+
+      @media (min-width: 640px) {
+        .choices {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .choice-btn {
+        position: relative;
+        text-align: left;
+        padding: 10px 11px 10px 11px;
+        border-radius: var(--radius-md);
+        border: 1px solid rgba(148, 163, 184, 0.45);
+        background: rgba(15, 23, 42, 0.9);
+        color: var(--text);
+        font-size: 0.9rem;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        transition: transform var(--transition-fast),
+          box-shadow var(--transition-fast), border-color var(--transition-fast),
+          background var(--transition-fast);
+      }
+
+      .choice-btn::before {
+        content: attr(data-label);
+        position: absolute;
+        top: 7px;
+        right: 9px;
+        font-size: 0.7rem;
+        opacity: 0.7;
+        padding: 1px 6px;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.5);
+      }
+
+      .choice-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 12px 32px rgba(15, 23, 42, 0.6);
+        border-color: rgba(56, 189, 248, 0.7);
+        background: radial-gradient(
+          circle at top left,
+          rgba(56, 189, 248, 0.18),
+          rgba(15, 23, 42, 0.98)
+        );
+      }
+
+      .choice-btn:active {
+        transform: translateY(1px);
+        box-shadow: none;
+      }
+
+      .choice-main {
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+
+      .choice-desc {
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+
+      .footer-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        font-size: 0.8rem;
+        color: var(--muted);
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .pill {
+        padding: 4px 8px;
+        border-radius: 999px;
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(148, 163, 184, 0.4);
+      }
+
+      /* Story selection screen */
+      .story-grid {
+        display: grid;
+        gap: 14px;
+        margin-top: 10px;
+      }
+
+      @media (min-width: 768px) {
+        .story-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .story-card {
+        background: rgba(15, 23, 42, 0.9);
+        border-radius: var(--radius-md);
+        border: 1px solid rgba(148, 163, 184, 0.4);
+        padding: 16px 16px 18px;
+        cursor: pointer;
+        transition: transform var(--transition-fast),
+          box-shadow var(--transition-fast), border-color var(--transition-fast);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .story-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 32px rgba(15, 23, 42, 0.7);
+        border-color: rgba(56, 189, 248, 0.7);
+      }
+
+      .story-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 8px;
+      }
+
+      .story-card-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
+
+      .story-card-subtitle {
+        font-size: 0.8rem;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+
+      .story-card-badge {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+        border-radius: 999px;
+        background: rgba(34, 197, 94, 0.15);
+        border: 1px solid rgba(34, 197, 94, 0.4);
+        color: #bbf7d0;
+        white-space: nowrap;
+      }
+
+      .story-card-desc {
+        font-size: 0.88rem;
+        color: var(--muted);
+        line-height: 1.5;
+        margin-bottom: 10px;
+      }
+
+      .story-card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .story-card-dimensions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .loading-state {
+        text-align: center;
+        padding: 40px 20px;
+        color: var(--muted);
+      }
+
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(148, 163, 184, 0.3);
+        border-top-color: var(--accent);
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        margin: 0 auto 16px;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Intro screen */
+
+      .intro-text {
+        font-size: 0.95rem;
+        color: var(--muted);
+        line-height: 1.6;
+        margin-bottom: 16px;
+      }
+
+      .intro-grid {
+        display: grid;
+        gap: 12px;
+        margin-top: 10px;
+      }
+
+      @media (min-width: 640px) {
+        .intro-grid {
+          grid-template-columns: 1.5fr 1.2fr;
+        }
+      }
+
+      .metric-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 9px;
+        border-radius: 999px;
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(148, 163, 184, 0.4);
+        font-size: 0.78rem;
+        color: var(--muted);
+      }
+
+      .metric-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--accent);
+        opacity: 0.8;
+      }
+
+      .btn {
+        border-radius: 999px;
+        padding: 9px 18px;
+        border: none;
+        cursor: pointer;
+        font-size: 0.9rem;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: background var(--transition-fast),
+          transform var(--transition-fast), box-shadow var(--transition-fast);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #0ea5e9, #22c55e);
+        color: #0b1120;
+        box-shadow: 0 10px 30px rgba(56, 189, 248, 0.6);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 36px rgba(56, 189, 248, 0.7);
+      }
+
+      .btn-secondary {
+        background: rgba(15, 23, 42, 0.9);
+        color: var(--muted);
+        border: 1px solid rgba(148, 163, 184, 0.5);
+      }
+
+      .btn-secondary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 26px rgba(15, 23, 42, 0.7);
+      }
+
+      .btn-icon {
+        font-size: 1.1rem;
+      }
+
+      /* Report */
+
+      .report-grid {
+        display: grid;
+        gap: 14px;
+        margin-top: 10px;
+      }
+
+      @media (min-width: 768px) {
+        .report-grid {
+          grid-template-columns: 1.4fr 1fr;
+        }
+      }
+
+      .report-section {
+        background: rgba(15, 23, 42, 0.9);
+        border-radius: var(--radius-md);
+        border: 1px solid rgba(148, 163, 184, 0.4);
+        padding: 12px 12px 13px;
+      }
+
+      .report-heading {
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+
+      .report-text {
+        font-size: 0.85rem;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .score-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.85rem;
+        margin: 3px 0;
+      }
+
+      .score-label {
+        color: var(--muted);
+      }
+
+      .score-value {
+        font-weight: 600;
+      }
+
+      .score-bar {
+        height: 5px;
+        border-radius: 999px;
+        background: rgba(30, 64, 175, 0.7);
+        overflow: hidden;
+        margin-top: 4px;
+      }
+
+      .score-bar-inner {
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, #22c55e, #38bdf8);
+        width: 0%;
+        transition: width 0.3s ease-out;
+      }
+
+      .chips-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 6px;
+      }
+
+      .chip-tag {
+        font-size: 0.76rem;
+        padding: 3px 8px;
+        border-radius: 999px;
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(148, 163, 184, 0.4);
+        color: var(--muted);
+      }
+
+      .log-list {
+        list-style: none;
+        font-size: 0.8rem;
+        color: var(--muted);
+        max-height: 200px;
+        overflow-y: auto;
+        padding-right: 4px;
+      }
+
+      .log-item + .log-item {
+        margin-top: 4px;
+      }
+
+      .tag {
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #a5b4fc;
+      }
+
+      .pill-archetype {
+        padding: 5px 10px;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        background: rgba(56, 189, 248, 0.1);
+        border: 1px solid rgba(56, 189, 248, 0.7);
+        color: #e0f2fe;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 4px;
+      }
+
+      .pill-archetype span {
+        font-size: 0.9rem;
+      }
+
+      /* Elaboration Modal */
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+
+      .modal-overlay.active {
+        display: flex;
+      }
+
+      .modal-content {
+        background: linear-gradient(
+          145deg,
+          rgba(15, 23, 42, 0.98),
+          rgba(15, 23, 42, 0.95)
+        );
+        border: 1px solid rgba(148, 163, 184, 0.3);
+        border-radius: var(--radius-lg);
+        padding: 24px;
+        max-width: 500px;
+        width: 90%;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+      }
+
+      .modal-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: var(--text);
+      }
+
+      .modal-subtitle {
+        font-size: 0.88rem;
+        color: var(--muted);
+        margin-bottom: 16px;
+        line-height: 1.4;
+      }
+
+      .modal-choice-display {
+        background: rgba(56, 189, 248, 0.1);
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        border-radius: var(--radius-md);
+        padding: 10px 12px;
+        margin-bottom: 14px;
+        font-size: 0.85rem;
+        color: #bae6fd;
+      }
+
+      .modal-label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--muted);
+        margin-bottom: 6px;
+      }
+
+      .elaboration-textarea {
+        width: 100%;
+        height: 120px;
+        padding: 10px 12px;
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(148, 163, 184, 0.4);
+        border-radius: var(--radius-md);
+        color: var(--text);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          sans-serif;
+        font-size: 0.9rem;
+        resize: none;
+        transition: border-color var(--transition-fast);
+        margin-bottom: 8px;
+      }
+
+      .elaboration-textarea:focus {
+        outline: none;
+        border-color: rgba(56, 189, 248, 0.7);
+      }
+
+      .elaboration-textarea::placeholder {
+        color: rgba(148, 163, 184, 0.6);
+      }
+
+      .word-count {
+        font-size: 0.75rem;
+        color: var(--muted);
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .word-count.valid {
+        color: var(--success);
+      }
+
+      .word-count.invalid {
+        color: var(--danger);
+      }
+
+      .validation-message {
+        font-size: 0.75rem;
+        color: var(--danger);
+        margin-top: -6px;
+        margin-bottom: 10px;
+        display: none;
+      }
+
+      .validation-message.show {
+        display: block;
+      }
+
+      .modal-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 16px;
+      }
+
+      .modal-buttons button {
+        flex: 1;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: none;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: all var(--transition-fast);
+      }
+
+      .btn-save {
+        background: linear-gradient(135deg, #0ea5e9, #22c55e);
+        color: #0b1120;
+        box-shadow: 0 10px 30px rgba(56, 189, 248, 0.6);
+      }
+
+      .btn-save:hover:not(:disabled) {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 36px rgba(56, 189, 248, 0.7);
+      }
+
+      .btn-save:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      .btn-cancel {
+        background: rgba(15, 23, 42, 0.9);
+        color: var(--muted);
+        border: 1px solid rgba(148, 163, 184, 0.5);
+      }
+
+      .btn-cancel:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 26px rgba(15, 23, 42, 0.7);
+      }
+
+      /* Download Report Modal */
+      .download-modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1001;
+      }
+
+      .download-modal-overlay.active {
+        display: flex;
+      }
+
+      .download-modal-content {
+        background: linear-gradient(
+          145deg,
+          rgba(15, 23, 42, 0.98),
+          rgba(15, 23, 42, 0.95)
+        );
+        border: 1px solid rgba(148, 163, 184, 0.3);
+        border-radius: var(--radius-lg);
+        padding: 24px;
+        max-width: 500px;
+        width: 90%;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+        position: relative;
+      }
+
+      .download-modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 16px;
+      }
+
+      .download-modal-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text);
+        flex: 1;
+      }
+
+      .download-modal-close {
+        font-size: 0.9rem;
+        color: var(--muted);
+        cursor: pointer;
+        transition: color var(--transition-fast);
+        user-select: none;
+      }
+
+      .download-modal-close:hover {
+        color: var(--accent);
+      }
+
+      .download-form-group {
+        margin-bottom: 14px;
+      }
+
+      .download-form-label {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--text);
+        margin-bottom: 6px;
+        display: block;
+      }
+
+      .download-form-label-required {
+        color: var(--danger);
+        margin-left: 2px;
+      }
+
+      .download-form-input,
+      .download-form-textarea {
+        width: 100%;
+        padding: 10px 12px;
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(148, 163, 184, 0.4);
+        border-radius: var(--radius-md);
+        color: var(--text);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          sans-serif;
+        font-size: 0.9rem;
+        transition: border-color var(--transition-fast);
+      }
+
+      .download-form-input:focus,
+      .download-form-textarea:focus {
+        outline: none;
+        border-color: rgba(56, 189, 248, 0.7);
+      }
+
+      .download-form-input::placeholder,
+      .download-form-textarea::placeholder {
+        color: rgba(148, 163, 184, 0.6);
+      }
+
+      .download-form-textarea {
+        resize: none;
+        height: 90px;
+      }
+
+      .download-form-error {
+        font-size: 0.75rem;
+        color: var(--danger);
+        margin-top: 4px;
+        display: none;
+      }
+
+      .download-form-error.show {
+        display: block;
+      }
+
+      .download-modal-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .download-btn-primary {
+        flex: 1;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: none;
+        background: linear-gradient(135deg, #0ea5e9, #22c55e);
+        color: #0b1120;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 0.9rem;
+        box-shadow: 0 10px 30px rgba(56, 189, 248, 0.6);
+        transition: all var(--transition-fast);
+      }
+
+      .download-btn-primary:hover:not(:disabled) {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 36px rgba(56, 189, 248, 0.7);
+      }
+
+      .download-btn-primary:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      /* Scrollbar small tweak */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(148, 163, 184, 0.6);
+        border-radius: 999px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <div class="title-block">
+          <div class="app-title" id="header-title">
+            RPG Collection @ Teamfd
+            <span class="badge" id="header-badge">Lite</span>
+          </div>
+          <div class="subtitle" id="header-subtitle">
+            Choose a workplace scenario and discover your decision patterns.
+          </div>
+        </div>
+        <div class="progress-pill" id="progress-pill" style="display: none">
+          <span class="progress-dot"></span>
+          <span id="progress-text">Intro</span>
+        </div>
+      </header>
+
+      <main>
+        <!-- STORY SELECTION SCREEN -->
+        <section id="screen-stories" class="card">
+          <div class="card-inner">
+            <div class="scene-title">Select a RPG Episode</div>
+            <p class="intro-text">
+              Each scenario tests different aspects of your workplace mindset.
+              Select one to begin.
+            </p>
+
+            <div id="stories-loading" class="loading-state">
+              <div class="loading-spinner"></div>
+              <div>Loading available stories...</div>
+            </div>
+
+            <div id="stories-container" class="story-grid hidden"></div>
+          </div>
+        </section>
+
+        <!-- INTRO SCREEN -->
+        <section id="screen-intro" class="card hidden">
+          <div class="card-inner">
+            <div class="scene-title" id="intro-welcome">Welcome,</div>
+            <p class="intro-text" id="intro-description"></p>
+
+            <div class="intro-grid">
+              <div>
+                <div class="tag">You'll be measured on</div>
+                <div
+                  class="chips-row"
+                  id="intro-dimensions"
+                  style="margin-top: 6px"
+                ></div>
+              </div>
+              <div>
+                <div class="tag">How to play</div>
+                <ul class="log-list" style="max-height: 120px; margin-top: 4px">
+                  <li>• Read each scene as if it's really your work.</li>
+                  <li>• Choose the option you would most likely take.</li>
+                  <li>
+                    • Don't try to "game it" – honest choices = useful insight.
+                  </li>
+                  <li>
+                    • At the end you'll see your score and a short analysis.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              style="
+                margin-top: 16px;
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+              "
+            >
+              <button class="btn btn-primary" onclick="startGame()">
+                <span class="btn-icon">▶</span> Start the role
+              </button>
+              <button class="btn btn-secondary" onclick="backToStories()">
+                ← Select Again
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- GAME SCREEN -->
+        <section id="screen-game" class="card hidden">
+          <div class="card-inner">
+            <div class="scene-meta">
+              <span id="scene-label"></span>
+              <span class="pill" id="scene-tag"></span>
+            </div>
+            <div class="scene-title" id="scene-title"></div>
+            <div class="scene-body" id="scene-body"></div>
+
+            <div class="choices" id="choices-container"></div>
+
+            <div class="footer-bar">
+              <span id="tip-text"></span>
+              <span class="pill" id="scene-counter"></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- REPORT SCREEN -->
+        <section id="screen-report" class="card hidden">
+          <div class="card-inner">
+            <div class="scene-meta">
+              <span class="tag">Persona Card</span>
+              <span class="pill" id="summary-pill"></span>
+            </div>
+            <div class="scene-title">
+              Snapshot of your decision pattern in this scenario
+            </div>
+
+            <div class="report-grid">
+              <div class="report-section">
+                <div class="report-heading">Overall,</div>
+                <div class="report-text" id="report-summary"></div>
+
+                <div
+                  class="pill-archetype"
+                  id="report-archetype"
+                  style="margin-top: 8px"
+                >
+                  <span>🎭</span>
+                  <span id="archetype-label"></span>
+                </div>
+
+                <div style="margin-top: 10px">
+                  <div class="report-heading" style="font-size: 0.86rem">
+                    Dimensions
+                  </div>
+                  <div id="scores-container"></div>
+                </div>
+              </div>
+
+              <div class="report-section">
+                <div class="report-heading">Your decisions</div>
+                <ul class="log-list" id="choices-log"></ul>
+              </div>
+            </div>
+
+            <div class="report-section" style="margin-top: 10px">
+              <div class="report-heading">Further Recommendation</div>
+              <div class="report-text" id="report-growth"></div>
+            </div>
+
+            <div
+              style="
+                margin-top: 14px;
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+              "
+            >
+              <button
+                class="btn btn-secondary"
+                onclick="showDownloadReportModal()"
+              >
+                <span class="btn-icon">💾</span> Save result for Mindset Report
+              </button>
+              <button class="btn btn-primary" onclick="restartGame()">
+                <span class="btn-icon">⟳</span> Play again
+              </button>
+              <button class="btn btn-secondary" onclick="backToStories()">
+                Try another RPG
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- ELABORATION MODAL -->
+      <div class="modal-overlay" id="elaboration-modal">
+        <div class="modal-content">
+          <div class="modal-title">Why did you do so?</div>
+          <div class="modal-subtitle">...and What else would you do?</div>
+
+          <div class="modal-choice-display" id="modal-choice-text"></div>
+
+          <div class="modal-label"></div>
+          <textarea
+            class="elaboration-textarea"
+            id="elaboration-input"
+            placeholder="Type here..."
+          ></textarea>
+
+          <div class="word-count" id="word-count-display">
+            <span id="word-count-text">0 words</span>
+            <span id="word-count-status"></span>
+          </div>
+
+          <div class="validation-message" id="validation-message">
+            Minimum 10 words required
+          </div>
+
+          <div class="modal-buttons">
+            <button class="btn-cancel" onclick="closeElaborationModal()">
+              Cancel
+            </button>
+            <button
+              class="btn-save"
+              id="save-elaboration-btn"
+              onclick="saveElaboration()"
+              disabled
+            >
+              Save & Continue
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- DOWNLOAD REPORT MODAL -->
+      <div class="download-modal-overlay" id="download-report-modal">
+        <div class="download-modal-content">
+          <div class="download-modal-header">
+            <div class="download-modal-title">
+              To get Mindset Report, submit this RPG result
+            </div>
+            <div
+              class="download-modal-close"
+              onclick="closeDownloadReportModal()"
+            >
+              Close
+            </div>
+          </div>
+
+          <div class="download-form-group">
+            <label class="download-form-label">
+              Source Code
+              <span class="download-form-label-required">*</span>
+            </label>
+            <input
+              type="text"
+              class="download-form-input"
+              id="download-source-code"
+              placeholder="Enter source code"
+              oninput="validateDownloadForm()"
+            />
+            <div class="download-form-error" id="download-source-code-error">
+              Source code is required
+            </div>
+          </div>
+
+          <div class="download-form-group">
+            <label class="download-form-label">
+              Questions you may have after this round
+              <span class="download-form-label-required">*</span>
+            </label>
+            <textarea
+              class="download-form-textarea"
+              id="download-questions"
+              placeholder="Type here..."
+              oninput="validateDownloadForm()"
+            ></textarea>
+            <div class="download-form-error" id="download-questions-error">
+              This field is required
+            </div>
+          </div>
+
+          <div class="download-form-group">
+            <label class="download-form-label">
+              What are your challenges at work?
+              <span class="download-form-label-required">*</span>
+            </label>
+            <textarea
+              class="download-form-textarea"
+              id="download-challenges"
+              placeholder="Type here..."
+              oninput="validateDownloadForm()"
+            ></textarea>
+            <div class="download-form-error" id="download-challenges-error">
+              This field is required
+            </div>
+          </div>
+
+          <div class="download-modal-buttons">
+            <button
+              class="download-btn-primary"
+              id="download-btn"
+              onclick="downloadReportAsJSON()"
+              disabled
+            >
+              Download result for Mindset Report
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      import {
+        initializeSession,
+        syncProgressUpdate,
+        syncSessionComplete,
+        notifyAbandonment,
+      } from './google-sheets-sync.js';
+
+      // existing code continues below…
+
+      // ==================== GLOBAL STATE ====================
+      let availableStories = [];
+      let currentStory = null;
+      let scenes = [];
+      let score = {};
+      let choiceHistory = [];
+      let currentSceneIndex = 0;
+      let elaborationData = [];
+      let pendingOption = null;
+      let sessionStartTime = null;
+      let sessionStartData = null;
+
+      // ==================== STORY LOADING ====================
+
+      async function loadAvailableStories() {
+        try {
+          // Load manifest
+          const manifestResponse = await fetch('stories/manifest.json');
+          const manifest = await manifestResponse.json();
+
+          // Load each story
+          const storyPromises = manifest.stories.map(async (uid) => {
+            try {
+              const response = await fetch(`stories/${uid}.json`);
+              return await response.json();
+            } catch (error) {
+              console.error(`Failed to load story ${uid}:`, error);
+              return null;
+            }
+          });
+
+          const stories = await Promise.all(storyPromises);
+          availableStories = stories.filter((s) => s !== null);
+
+          displayStories();
+        } catch (error) {
+          console.error('Failed to load stories:', error);
+          document.getElementById('stories-loading').innerHTML =
+            '<div style="color: var(--danger);">Failed to load stories. Please refresh the page.</div>';
+        }
+      }
+
+      function displayStories() {
+        const container = document.getElementById('stories-container');
+        const loading = document.getElementById('stories-loading');
+
+        if (availableStories.length === 0) {
+          loading.innerHTML = '<div>No stories available.</div>';
+          return;
+        }
+
+        loading.classList.add('hidden');
+        container.classList.remove('hidden');
+        container.innerHTML = '';
+
+        availableStories.forEach((story) => {
+          const card = document.createElement('div');
+          card.className = 'story-card';
+          card.onclick = () => selectStory(story);
+
+          const dimensionsHTML = story.dimensions
+            .map(
+              (d) =>
+                `<span class="metric-chip"><span class="metric-dot"></span> ${d.label}</span>`
+            )
+            .join('');
+
+          card.innerHTML = `
+            <div class="story-card-header">
+              <div>
+                <div class="story-card-title">${story.metadata.title}</div>
+              
+              </div>
+              <div class="story-card-badge">${story.metadata.difficulty}</div>
+            </div>
+            <div class="story-card-desc">${story.metadata.description}</div>
+            
+            <div class="story-card-footer">
+              <div class="story-card-dimensions chips-row">
+                ${dimensionsHTML}
+              </div>
+              <div class="pill">${story.metadata.duration}</div>
+            </div>
+          `;
+
+          container.appendChild(card);
+        });
+      }
+
+      function selectStory(story) {
+        currentStory = story;
+        scenes = story.scenes;
+
+        // Initialize score object with this story's dimensions
+        score = {};
+        story.dimensions.forEach((dim) => {
+          score[dim.key] = 0;
+        });
+
+        // Update header
+        document.getElementById(
+          'header-title'
+        ).innerHTML = `${story.metadata.title} <span class="badge">${story.metadata.subtitle}</span>`;
+        document.getElementById('header-subtitle').textContent =
+          story.metadata.description;
+        document.getElementById('progress-pill').style.display = 'flex';
+
+        // Update intro screen
+        document.getElementById('intro-description').textContent =
+          story.metadata.description;
+
+        const dimensionsContainer = document.getElementById('intro-dimensions');
+        dimensionsContainer.innerHTML = '';
+        story.dimensions.forEach((dim) => {
+          const chip = document.createElement('span');
+          chip.className = 'metric-chip';
+          chip.innerHTML = `<span class="metric-dot"></span> ${dim.label}`;
+          dimensionsContainer.appendChild(chip);
+        });
+
+        // Show intro screen
+        showScreen('screen-intro');
+      }
+
+      // ==================== SCREEN NAVIGATION ====================
+
+      function showScreen(screenId) {
+        const screens = [
+          'screen-stories',
+          'screen-intro',
+          'screen-game',
+          'screen-report',
+        ];
+        screens.forEach((id) => {
+          document.getElementById(id).classList.add('hidden');
+        });
+        document.getElementById(screenId).classList.remove('hidden');
+
+        // Show/hide progress pill
+        if (screenId === 'screen-stories') {
+          document.getElementById('progress-pill').style.display = 'none';
+          document.getElementById('header-title').innerHTML =
+            'Mindset RPG Collection <span class="badge">Stories</span>';
+          document.getElementById('header-subtitle').textContent =
+            'Choose a workplace scenario and discover your decision patterns.';
+        }
+
+        scrollToTop();
+      }
+
+      function backToStories() {
+        currentStory = null;
+        scenes = [];
+        score = {};
+        choiceHistory = [];
+        currentSceneIndex = 0;
+        elaborationData = [];
+        pendingOption = null;
+        showScreen('screen-stories');
+      }
+
+      // ==================== GAME LOGIC ====================
+
+      function startGame() {
+        initializeSession({
+          rpgUid: currentStory.metadata.uid,
+          rpgTitle: currentStory.metadata.title,
+          timestamp: Date.now(),
+        });
+
+        currentSceneIndex = 0;
+        choiceHistory = [];
+        elaborationData = [];
+        sessionStartTime = new Date();
+
+        // Reset scores
+        currentStory.dimensions.forEach((dim) => {
+          score[dim.key] = 0;
+        });
+
+        showScreen('screen-game');
+        renderScene();
+      }
+
+      function renderScene() {
+        const scene = scenes[currentSceneIndex];
+
+        // Update progress pill
+        document.getElementById('progress-text').textContent = scene.label;
+
+        // Update scene meta
+        document.getElementById('scene-label').textContent = scene.label;
+        document.getElementById('scene-tag').textContent = scene.tag;
+
+        // Update scene content
+        document.getElementById('scene-title').innerHTML = scene.title;
+        document.getElementById('scene-body').innerHTML = scene.body;
+        document.getElementById('tip-text').textContent = scene.tip;
+        document.getElementById('scene-counter').textContent = `${
+          currentSceneIndex + 1
+        } / ${scenes.length}`;
+
+        // Render choice buttons
+        const choicesContainer = document.getElementById('choices-container');
+        choicesContainer.innerHTML = '';
+
+        scene.options.forEach((option) => {
+          const btn = document.createElement('button');
+          btn.className = 'choice-btn';
+          btn.setAttribute('data-label', option.label);
+
+          const main = document.createElement('span');
+          main.className = 'choice-main';
+          main.textContent = option.main;
+
+          const desc = document.createElement('span');
+          desc.className = 'choice-desc';
+          desc.textContent = option.desc;
+
+          btn.appendChild(main);
+          btn.appendChild(desc);
+
+          btn.addEventListener('click', () => {
+            pendingOption = option;
+            showElaborationModal(option);
+          });
+
+          choicesContainer.appendChild(btn);
+        });
+      }
+
+      function applyScore(option, elaboration) {
+        // Apply deltas from this choice
+        Object.keys(option.deltas).forEach((key) => {
+          if (score.hasOwnProperty(key)) {
+            score[key] += option.deltas[key];
+          }
+        });
+
+        choiceHistory.push(option.code);
+        elaborationData.push(elaboration);
+      }
+
+      // ==================== REPORT GENERATION ====================
+
+      function showReport() {
+        showScreen('screen-report');
+        generateReport();
+      }
+
+      function generateReport() {
+        // Generate summary based on dimensions
+        let summary = generateSummary();
+        document.getElementById('report-summary').textContent = summary;
+
+        // Determine archetype
+        let archetype = determineArchetype();
+        document.getElementById('archetype-label').textContent = archetype;
+
+        // Generate scores display
+        const scoresContainer = document.getElementById('scores-container');
+        scoresContainer.innerHTML = '';
+
+        const sortedDimensions = [...currentStory.dimensions].sort(
+          (a, b) => score[b.key] - score[a.key]
+        );
+
+        sortedDimensions.forEach((dim) => {
+          const scoreRow = document.createElement('div');
+          scoreRow.className = 'score-row';
+
+          const label = document.createElement('span');
+          label.className = 'score-label';
+          label.textContent = dim.label;
+
+          const value = document.createElement('span');
+          value.className = 'score-value';
+          value.textContent = score[dim.key];
+
+          scoreRow.appendChild(label);
+          scoreRow.appendChild(value);
+          scoresContainer.appendChild(scoreRow);
+
+          const bar = document.createElement('div');
+          bar.className = 'score-bar';
+
+          const barInner = document.createElement('div');
+          barInner.className = 'score-bar-inner';
+
+          const maxVal = dim.maxValue || 15;
+          const normalizedValue = Math.max(
+            0,
+            Math.min(100, ((score[dim.key] + maxVal) / (maxVal * 2)) * 100)
+          );
+          barInner.style.width = normalizedValue + '%';
+
+          bar.appendChild(barInner);
+          scoresContainer.appendChild(bar);
+        });
+
+        // Generate choices log
+        const choicesLog = document.getElementById('choices-log');
+        choicesLog.innerHTML = '';
+
+        choiceHistory.forEach((choiceCode, index) => {
+          const scene = scenes[index];
+          const option = scene.options.find((o) => o.code === choiceCode);
+          const elaboration = elaborationData[index] || '';
+
+          const li = document.createElement('li');
+          li.innerHTML = `<strong>Scene ${index + 1}:</strong> ${
+            option.main
+          }. <em>${elaboration}</em>`;
+          choicesLog.appendChild(li);
+        });
+
+        // Generate growth suggestion
+        let growthText = determineGrowthSuggestion();
+        document.getElementById('report-growth').textContent = growthText;
+
+        // Update summary pill
+        document.getElementById(
+          'summary-pill'
+        ).textContent = `${scenes.length} scenes completed`;
+
+        // Sync final session data to Google Sheets immediately when report is generated
+        const dimensionScores = {};
+        currentStory.dimensions.forEach((dim) => {
+          dimensionScores[dim.label] = score[dim.key];
+        });
+
+        const choicesLog_data = [];
+        choiceHistory.forEach((choiceCode, index) => {
+          const scene = scenes[index];
+          const option = scene.options.find((o) => o.code === choiceCode);
+          const elaboration = elaborationData[index] || '';
+
+          choicesLog_data.push({
+            scene: index + 1,
+            choiceMain: option.main,
+            choiceDescription: option.desc,
+            elaboration: elaboration,
+          });
+        });
+
+        syncSessionComplete({
+          rpgUid: currentStory.metadata.uid,
+          rpgTitle: currentStory.metadata.title,
+          summary: summary,
+          archetype: archetype,
+          dimensionScores: dimensionScores,
+          choicesLog: choicesLog_data,
+          growthRecommendation: growthText,
+          completedAt: Date.now(),
+        });
+
+        // Show download report modal
+        showDownloadReportModal();
+      }
+
+      function generateSummary() {
+        // Use dimension-agnostic summary generation
+        const dims = currentStory.dimensions;
+        let summary = '';
+
+        dims.forEach((dim, index) => {
+          const val = score[dim.key];
+          const maxVal = dim.maxValue || 15;
+          const percentage = ((val + maxVal) / (maxVal * 2)) * 100;
+
+          let prefix = '';
+          if (percentage >= 65) {
+            prefix = `You show strong ${dim.label.toLowerCase()}.`;
+          } else if (percentage >= 40) {
+            prefix = `You demonstrate moderate ${dim.label.toLowerCase()}.`;
+          } else {
+            prefix = `You could develop more ${dim.label.toLowerCase()}.`;
+          }
+
+          summary += prefix + ' ';
+        });
+
+        return summary.trim();
+      }
+
+      function determineArchetype() {
+        const archetypes = currentStory.archetypeSystem.archetypes;
+
+        for (let arch of archetypes) {
+          try {
+            // Create a function that evaluates the condition with current scores
+            const conditionFunc = new Function(
+              ...Object.keys(score),
+              `return ${arch.condition};`
+            );
+            if (conditionFunc(...Object.values(score))) {
+              return arch.label;
+            }
+          } catch (e) {
+            console.error('Error evaluating archetype condition:', e);
+          }
+        }
+
+        return 'The Explorer';
+      }
+
+      function determineGrowthSuggestion() {
+        const suggestions = currentStory.growthSuggestions;
+
+        for (let suggestion of suggestions) {
+          try {
+            const conditionFunc = new Function(
+              ...Object.keys(score),
+              `return ${suggestion.condition};`
+            );
+            if (conditionFunc(...Object.values(score))) {
+              return suggestion.text;
+            }
+          } catch (e) {
+            console.error('Error evaluating growth suggestion:', e);
+          }
+        }
+
+        return 'Continue exploring your decision patterns and grow your self-awareness.';
+      }
+
+      function restartGame() {
+        elaborationData = [];
+        pendingOption = null;
+        showScreen('screen-intro');
+      }
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // ==================== ELABORATION MODAL ====================
+
+      function showElaborationModal(option) {
+        const modal = document.getElementById('elaboration-modal');
+        const choiceDisplay = document.getElementById('modal-choice-text');
+        const textarea = document.getElementById('elaboration-input');
+        const wordCountDisplay = document.getElementById('word-count-display');
+
+        choiceDisplay.textContent = option.main;
+        textarea.value = '';
+        textarea.focus();
+
+        updateWordCount();
+        modal.classList.add('active');
+      }
+
+      function closeElaborationModal() {
+        const modal = document.getElementById('elaboration-modal');
+        modal.classList.remove('active');
+        pendingOption = null;
+      }
+
+      function countWords(text) {
+        if (!text.trim()) return 0;
+        return text.trim().split(/\s+/).length;
+      }
+
+      function updateWordCount() {
+        const textarea = document.getElementById('elaboration-input');
+        const wordCountText = document.getElementById('word-count-text');
+        const wordCountStatus = document.getElementById('word-count-status');
+        const wordCountDisplay = document.getElementById('word-count-display');
+        const validationMessage = document.getElementById('validation-message');
+        const saveBtn = document.getElementById('save-elaboration-btn');
+
+        const wordCount = countWords(textarea.value);
+        const isValid = wordCount >= 10;
+
+        wordCountText.textContent = `${wordCount} words`;
+
+        if (isValid) {
+          wordCountStatus.textContent = '✓';
+          wordCountDisplay.classList.remove('invalid');
+          wordCountDisplay.classList.add('valid');
+          validationMessage.classList.remove('show');
+          saveBtn.disabled = false;
+        } else {
+          wordCountStatus.textContent = `(need ${10 - wordCount} more)`;
+          wordCountDisplay.classList.remove('valid');
+          wordCountDisplay.classList.add('invalid');
+          validationMessage.classList.add('show');
+          saveBtn.disabled = true;
+        }
+      }
+
+      function saveElaboration() {
+        const textarea = document.getElementById('elaboration-input');
+        const elaboration = textarea.value.trim();
+        const wordCount = countWords(elaboration);
+
+        if (wordCount < 10) {
+          return;
+        }
+
+        applyScore(pendingOption, elaboration);
+        syncProgressUpdate({
+          scenesCompleted: choiceHistory.length,
+          choice: {
+            scene: currentSceneIndex + 1,
+            code: pendingOption.code,
+            elaboration: elaboration,
+          },
+          score: { ...score },
+        });
+
+        const modal = document.getElementById('elaboration-modal');
+        modal.classList.remove('active');
+
+        if (pendingOption.end) {
+          showReport();
+        } else {
+          currentSceneIndex++;
+          renderScene();
+        }
+
+        pendingOption = null;
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const textarea = document.getElementById('elaboration-input');
+        textarea.addEventListener('input', updateWordCount);
+
+        const modal = document.getElementById('elaboration-modal');
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            closeElaborationModal();
+          }
+        });
+
+        const downloadModal = document.getElementById('download-report-modal');
+        downloadModal.addEventListener('click', (e) => {
+          if (e.target === downloadModal) {
+            closeDownloadReportModal();
+          }
+        });
+      });
+
+      // ==================== DOWNLOAD REPORT MODAL ====================
+
+      let downloadFormData = {
+        sourceCode: '',
+        questions: '',
+        challenges: '',
+      };
+
+      function showDownloadReportModal() {
+        const modal = document.getElementById('download-report-modal');
+        resetDownloadForm();
+        modal.classList.add('active');
+      }
+
+      function closeDownloadReportModal() {
+        const modal = document.getElementById('download-report-modal');
+        modal.classList.remove('active');
+        resetDownloadForm();
+      }
+
+      function resetDownloadForm() {
+        document.getElementById('download-source-code').value = '';
+        document.getElementById('download-questions').value = '';
+        document.getElementById('download-challenges').value = '';
+
+        downloadFormData = {
+          sourceCode: '',
+          questions: '',
+          challenges: '',
+        };
+
+        document
+          .getElementById('download-source-code-error')
+          .classList.remove('show');
+        document
+          .getElementById('download-questions-error')
+          .classList.remove('show');
+        document
+          .getElementById('download-challenges-error')
+          .classList.remove('show');
+
+        document.getElementById('download-btn').disabled = true;
+      }
+
+      window.validateDownloadForm = function () {
+        const sourceCodeEl = document.getElementById('download-source-code');
+        const questionsEl = document.getElementById('download-questions');
+        const challengesEl = document.getElementById('download-challenges');
+        const downloadBtn = document.getElementById('download-btn');
+
+        if (!sourceCodeEl || !questionsEl || !challengesEl || !downloadBtn)
+          return;
+
+        const sourceCode = sourceCodeEl.value.trim();
+        const questions = questionsEl.value.trim();
+        const challenges = challengesEl.value.trim();
+
+        downloadFormData.sourceCode = sourceCode;
+        downloadFormData.questions = questions;
+        downloadFormData.challenges = challenges;
+
+        const isSourceCodeValid = sourceCode.length > 0;
+        const isQuestionsValid = questions.length > 0;
+        const isChallengesValid = challenges.length > 0;
+
+        document
+          .getElementById('download-source-code-error')
+          .classList.toggle('show', !isSourceCodeValid);
+
+        document
+          .getElementById('download-questions-error')
+          .classList.toggle('show', !isQuestionsValid);
+
+        document
+          .getElementById('download-challenges-error')
+          .classList.toggle('show', !isChallengesValid);
+
+        downloadBtn.disabled = !(
+          isSourceCodeValid &&
+          isQuestionsValid &&
+          isChallengesValid
+        );
+      };
+
+      function formatDate(date) {
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const year = date.getFullYear();
+        return `${day}-${month}-${year}`;
+      }
+
+      function formatTime(date) {
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+        return `${hours}:${minutes}`;
+      }
+
+      function sanitizeFilename(str) {
+        return str.replace(/[/\\:*?"<>|]/g, '').trim();
+      }
+
+      function generateJSONFilename() {
+        const date = new Date();
+        const dateFormatted = formatDate(date);
+        const timeFormatted = formatTime(date);
+        const sourceCode = sanitizeFilename(downloadFormData.sourceCode);
+        const rpgUid = currentStory.metadata.uid;
+
+        return `${sourceCode} - ${dateFormatted} - ${timeFormatted} - ${rpgUid}.json`;
+      }
+
+      function compileReportDataForJSON() {
+        const reportData = {
+          sourceCode: downloadFormData.sourceCode,
+          questionsAfterRound: downloadFormData.questions,
+          workChallenges: downloadFormData.challenges,
+          rpgUid: currentStory.metadata.uid,
+          rpgTitle: currentStory.metadata.title,
+          summary: document.getElementById('report-summary').textContent,
+          archetype: document.getElementById('archetype-label').textContent,
+          dimensionScores: {},
+          choicesLog: [],
+          growthRecommendation:
+            document.getElementById('report-growth').textContent,
+          generatedAt: {
+            date: formatDate(new Date()),
+            time: formatTime(new Date()),
+          },
+        };
+
+        currentStory.dimensions.forEach((dim) => {
+          reportData.dimensionScores[dim.label] = score[dim.key];
+        });
+
+        choiceHistory.forEach((choiceCode, index) => {
+          const scene = scenes[index];
+          const option = scene.options.find((o) => o.code === choiceCode);
+          const elaboration = elaborationData[index] || '';
+
+          reportData.choicesLog.push({
+            scene: index + 1,
+            choiceMain: option.main,
+            choiceDescription: option.desc,
+            elaboration: elaboration,
+          });
+        });
+
+        return reportData;
+      }
+
+      function downloadReportAsJSON() {
+        const reportData = compileReportDataForJSON();
+        const jsonString = JSON.stringify(reportData, null, 2);
+        const blob = new Blob([jsonString], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = generateJSONFilename();
+
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        URL.revokeObjectURL(url);
+        closeDownloadReportModal();
+      }
+
+      // ==================== INITIALIZATION ====================
+
+      // Load stories when page loads
+      window.addEventListener('DOMContentLoaded', loadAvailableStories);
+      window.addEventListener('beforeunload', () => {
+        notifyAbandonment({
+          scenesCompleted: choiceHistory.length,
+          partialScore: { ...score },
+          partialChoices: [...choiceHistory],
+          timestamp: Date.now(),
+        });
+      });
+      // === Expose functions for inline HTML ===
+      window.startGame = startGame;
+      window.selectStory = selectStory;
+
+      window.showDownloadReportModal = showDownloadReportModal;
+      window.restartGame = restartGame;
+      window.backToStories = backToStories;
+
+      window.closeElaborationModal = closeElaborationModal;
+      window.saveElaboration = saveElaboration;
+
+      window.closeDownloadReportModal = closeDownloadReportModal;
+      window.downloadReportAsJSON = downloadReportAsJSON;
+    </script>
+  </body>
+</html>

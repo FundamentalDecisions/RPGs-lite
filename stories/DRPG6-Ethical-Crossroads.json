@@ -1,0 +1,358 @@
+{
+  "metadata": {
+    "uid": "DRPG6-Ethical-Crossroads",
+    "title": "The Ethical Crossroads",
+    "subtitle": "Lite",
+    "description": "You sense that something is ethically wrong inside the company — unexplained numbers, whispers in the hallway, and mounting pressure. Your decisions reveal your integrity, courage, and how you balance truth, safety, and harmony.",
+    "hint": "Tests Integrity mindset, Courage in judgment, Harmony preference, and Risk mindset",
+    "difficulty": "Medium",
+    "duration": "5-7 minutes",
+    "color": "#f97316"
+  },
+  "dimensions": [
+    {
+      "key": "risk",
+      "label": "Risk mindset",
+      "description": "How you approach danger, exposure, and personal consequences",
+      "maxValue": 12
+    },
+    {
+      "key": "clarity",
+      "label": "Clarity mindset",
+      "description": "How you interpret signals, verify facts, and pursue truth",
+      "maxValue": 15
+    },
+    {
+      "key": "courage",
+      "label": "Courage / integrity",
+      "description": "How strongly you stand by values under pressure",
+      "maxValue": 15
+    },
+    {
+      "key": "empathy",
+      "label": "Harmony & relational awareness",
+      "description": "How much you prioritize peace, relationships, and emotional signals",
+      "maxValue": 12
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene1",
+      "label": "Scene 1",
+      "title": "Rumor in the Hallway",
+      "tag": "Integrity trigger",
+      "body": "A teammate leans close and whispers: <span class=\"highlight\">“Finance might be hiding losses from last quarter.”</span><br><br>The hallway feels heavier than usual. This could be nothing… or the start of something serious.",
+      "tip": "Your first instinct reveals how you face uncertain truth.",
+      "options": [
+        {
+          "code": "1A",
+          "label": "A",
+          "main": "Ask for details immediately.",
+          "desc": "You confront the ambiguity head-on.",
+          "deltas": { "risk": 0, "clarity": 1, "courage": 1, "empathy": -1 }
+        },
+        {
+          "code": "1B",
+          "label": "B",
+          "main": "Ignore it; could be gossip.",
+          "desc": "You avoid unnecessary friction.",
+          "deltas": { "risk": -1, "clarity": 0, "courage": -1, "empathy": 0 }
+        },
+        {
+          "code": "1C",
+          "label": "C",
+          "main": "Observe quietly to confirm evidence.",
+          "desc": "You stay alert before acting.",
+          "deltas": { "risk": 0, "clarity": 2, "courage": 0, "empathy": 1 }
+        },
+        {
+          "code": "1D",
+          "label": "D",
+          "main": "Ask why they’re telling YOU specifically.",
+          "desc": "You sense political motives.",
+          "deltas": { "risk": 1, "clarity": 1, "courage": 1, "empathy": 2 }
+        }
+      ]
+    },
+    {
+      "id": "scene2",
+      "label": "Scene 2",
+      "title": "The Suspicious File",
+      "tag": "Curiosity vs avoidance",
+      "body": "Later, you see a folder on the shared drive: <span class=\"highlight\">“Adjustments – Internal”</span>. The timing feels suspicious.",
+      "tip": "This reveals whether you avoid or investigate sensitive signals.",
+      "options": [
+        {
+          "code": "2A",
+          "label": "A",
+          "main": "Open it immediately.",
+          "desc": "You pierce the ambiguity quickly.",
+          "deltas": { "risk": 1, "clarity": 1, "courage": 2, "empathy": 0 }
+        },
+        {
+          "code": "2B",
+          "label": "B",
+          "main": "Ask finance casually about the folder.",
+          "desc": "You test the waters through dialogue.",
+          "deltas": { "risk": 0, "clarity": 0, "courage": -1, "empathy": 2 }
+        },
+        {
+          "code": "2C",
+          "label": "C",
+          "main": "Screenshot it and save for later proof.",
+          "desc": "You document quietly for safety.",
+          "deltas": { "risk": 1, "clarity": 2, "courage": 1, "empathy": -1 }
+        },
+        {
+          "code": "2D",
+          "label": "D",
+          "main": "Close it and walk away.",
+          "desc": "You prefer not to get involved.",
+          "deltas": { "risk": -1, "clarity": -1, "courage": -2, "empathy": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene3",
+      "label": "Scene 3",
+      "title": "Your Manager Approaches",
+      "tag": "Ambiguous pressure",
+      "body": "Your manager overhears you near finance. They pause: <span class=\"highlight\">“Everything okay?”</span><br><br>It’s unclear whether they know something… or suspect you do.",
+      "tip": "Your answer determines whether you reveal or conceal uncertainty.",
+      "options": [
+        {
+          "code": "3A",
+          "label": "A",
+          "main": "Tell them everything.",
+          "desc": "You choose early transparency.",
+          "deltas": { "risk": 0, "clarity": 1, "courage": 2, "empathy": 0 }
+        },
+        {
+          "code": "3B",
+          "label": "B",
+          "main": "Stay vague.",
+          "desc": "You keep your distance from conflict.",
+          "deltas": { "risk": -1, "clarity": 0, "courage": -1, "empathy": 1 }
+        },
+        {
+          "code": "3C",
+          "label": "C",
+          "main": "Ask THEM what they know.",
+          "desc": "You push for context.",
+          "deltas": { "risk": 1, "clarity": 2, "courage": 1, "empathy": 1 }
+        },
+        {
+          "code": "3D",
+          "label": "D",
+          "main": "Deflect and change the subject.",
+          "desc": "You protect yourself first.",
+          "deltas": { "risk": -1, "clarity": -1, "courage": -2, "empathy": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene4",
+      "label": "Scene 4",
+      "title": "Finance Director Calls You In",
+      "tag": "Confrontation",
+      "body": "Unexpectedly, the finance director asks: <span class=\"highlight\">“Did you see something you shouldn’t?”</span><br><br>The room feels smaller. They’re watching your reaction carefully.",
+      "tip": "This moment tests your integrity under scrutiny.",
+      "options": [
+        {
+          "code": "4A",
+          "label": "A",
+          "main": "Tell the truth calmly.",
+          "desc": "You stand your ground.",
+          "deltas": { "risk": 1, "clarity": 2, "courage": 3, "empathy": 0 }
+        },
+        {
+          "code": "4B",
+          "label": "B",
+          "main": "Pretend you didn’t notice anything.",
+          "desc": "You prioritize safety over truth.",
+          "deltas": { "risk": -2, "clarity": -1, "courage": -2, "empathy": 1 }
+        },
+        {
+          "code": "4C",
+          "label": "C",
+          "main": "Ask them to explain the adjustments.",
+          "desc": "You demand context respectfully.",
+          "deltas": { "risk": 1, "clarity": 3, "courage": 1, "empathy": 1 }
+        },
+        {
+          "code": "4D",
+          "label": "D",
+          "main": "Counter-question aggressively.",
+          "desc": "You challenge authority directly.",
+          "deltas": { "risk": 2, "clarity": 1, "courage": 2, "empathy": -2 }
+        }
+      ]
+    },
+    {
+      "id": "scene5",
+      "label": "Scene 5",
+      "title": "A Colleague Warns You",
+      "tag": "Fear trigger",
+      "body": "A coworker whispers: <span class=\"highlight\">“Careful. People who dig too deep get burned.”</span><br>You sense concern — or fear.",
+      "tip": "This choice reveals your relationship with danger and truth.",
+      "options": [
+        {
+          "code": "5A",
+          "label": "A",
+          "main": "“Truth matters more than safety.”",
+          "desc": "You commit to integrity despite risk.",
+          "deltas": { "risk": 1, "clarity": 1, "courage": 2, "empathy": 0 }
+        },
+        {
+          "code": "5B",
+          "label": "B",
+          "main": "“Maybe you’re right…”",
+          "desc": "You lean toward self-protection.",
+          "deltas": { "risk": -1, "clarity": 0, "courage": -1, "empathy": 1 }
+        },
+        {
+          "code": "5C",
+          "label": "C",
+          "main": "“Why hasn’t anyone acted?”",
+          "desc": "You question systemic silence.",
+          "deltas": { "risk": 0, "clarity": 2, "courage": 1, "empathy": 2 }
+        },
+        {
+          "code": "5D",
+          "label": "D",
+          "main": "“Who else knows?”",
+          "desc": "You expand your understanding of the network.",
+          "deltas": { "risk": 1, "clarity": 2, "courage": 0, "empathy": 1 }
+        }
+      ]
+    },
+    {
+      "id": "scene6",
+      "label": "scene6",
+      "title": "Shadow You Appears",
+      "tag": "Inner confrontation",
+      "body": "A faint silhouette — another version of you — whispers: <span class=\"highlight\">“Integrity is costly. Are you sure you want the truth?”</span>",
+      "tip": "Your response defines your ethical identity.",
+      "options": [
+        {
+          "code": "6A",
+          "label": "A",
+          "main": "“Yes. Always.”",
+          "desc": "Truth is your non-negotiable.",
+          "deltas": { "risk": 1, "clarity": 1, "courage": 2, "empathy": 0 }
+        },
+        {
+          "code": "6B",
+          "label": "B",
+          "main": "“Help me decide.”",
+          "desc": "You seek relational guidance.",
+          "deltas": { "risk": 0, "clarity": 1, "courage": 1, "empathy": 2 }
+        },
+        {
+          "code": "6C",
+          "label": "C",
+          "main": "“Truth, but carefully.”",
+          "desc": "You balance caution with integrity.",
+          "deltas": { "risk": 0, "clarity": 2, "courage": 1, "empathy": 1 }
+        },
+        {
+          "code": "6D",
+          "label": "D",
+          "main": "“I need to stay safe first.”",
+          "desc": "Self-protection guides you.",
+          "deltas": { "risk": -1, "clarity": 0, "courage": -2, "empathy": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene7",
+      "label": "scene7",
+      "title": "Final Ethical Fork",
+      "tag": "Truth vs harmony vs safety",
+      "body": "Your path splits into three glowing doors:<br><br><strong>SAFE — Stay Silent</strong><br><strong>SMART — Report Internally</strong><br><strong>BRAVE — Whistleblow</strong>",
+      "tip": "Your final choice reveals your ethical archetype.",
+      "options": [
+        {
+          "code": "7SAFE",
+          "label": "A",
+          "main": "Choose SAFE.",
+          "desc": "You protect yourself and harmony above truth.",
+          "deltas": { "risk": -2, "clarity": 0, "courage": -2, "empathy": 1 },
+          "end": true
+        },
+        {
+          "code": "7SMART",
+          "label": "B",
+          "main": "Choose SMART.",
+          "desc": "You prioritize internal accountability.",
+          "deltas": { "risk": 0, "clarity": 3, "courage": 2, "empathy": 1 },
+          "end": true
+        },
+        {
+          "code": "7BRAVE",
+          "label": "C",
+          "main": "Choose BRAVE.",
+          "desc": "You stand boldly for truth, no matter the cost.",
+          "deltas": { "risk": 3, "clarity": 1, "courage": 4, "empathy": 0 },
+          "end": true
+        }
+      ]
+    }
+  ],
+  "archetypeSystem": {
+    "archetypes": [
+      {
+        "id": "truthTeller",
+        "label": "The Truth-Teller",
+        "condition": "clarity >= 6 && courage >= 6"
+      },
+      {
+        "id": "diplomat",
+        "label": "The Diplomat",
+        "condition": "empathy >= 5 && clarity >= 4"
+      },
+      {
+        "id": "protector",
+        "label": "The Protector",
+        "condition": "risk < 0 && empathy >= 4"
+      },
+      {
+        "id": "harmonizer",
+        "label": "The Harmonizer",
+        "condition": "empathy >= 6 && courage < 4"
+      },
+      {
+        "id": "whistleblower",
+        "label": "The Whistleblower",
+        "condition": "courage >= 7 && risk >= 2"
+      },
+      {
+        "id": "generalist",
+        "label": "The Ethical Generalist",
+        "condition": "true"
+      }
+    ]
+  },
+  "growthSuggestions": [
+    {
+      "condition": "courage < 3 && clarity > 4",
+      "text": "Your analysis is strong, but courage lags. Work on assertive truth-telling."
+    },
+    {
+      "condition": "empathy > 6 && courage < 4",
+      "text": "Harmony drives you — sometimes too much. Develop comfort with ethical conflict."
+    },
+    {
+      "condition": "risk > 5",
+      "text": "Your willingness to expose issues is high. Ensure you have emotional and procedural safety nets."
+    },
+    {
+      "condition": "integrity < 4",
+      "text": "Your ethical stance can weaken under pressure. Practice naming values before making decisions."
+    },
+    {
+      "condition": "true",
+      "text": "You show a developing ethical balance. Continue strengthening clarity, integrity, and courage under ambiguity."
+    }
+  ]
+}

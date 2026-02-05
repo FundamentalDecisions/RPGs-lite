@@ -1,0 +1,353 @@
+{
+  "metadata": {
+    "uid": "DRPG8-Promotion-Trap",
+    "title": "The Promotion Trap",
+    "subtitle": "Lite",
+    "description": "You hear whispers of a role opening above you. A promotion could change everything — visibility, responsibility, and identity. But ambition comes with pressure, comparison, and self-doubt. Each choice reveals how you navigate worthiness, risk, and strategic positioning.",
+    "hint": "Tests Ambition, Self-Worth, Visibility, Risk Appetite, Strategic Mindset",
+    "difficulty": "Medium",
+    "duration": "5-7 minutes",
+    "color": "#f97316"
+  },
+  "dimensions": [
+    {
+      "key": "risk",
+      "label": "Risk mindset",
+      "description": "How boldly you pursue opportunities and confront competition.",
+      "maxValue": 12
+    },
+    {
+      "key": "clarity",
+      "label": "Clarity mindset",
+      "description": "How clearly you evaluate roles, expectations, and strategic moves.",
+      "maxValue": 15
+    },
+    {
+      "key": "courage",
+      "label": "Ownership & ambition",
+      "description": "How confidently you claim space, visibility, and responsibility.",
+      "maxValue": 15
+    },
+    {
+      "key": "empathy",
+      "label": "Relational awareness",
+      "description": "How you balance ambition with emotional and social intelligence.",
+      "maxValue": 12
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene1",
+      "label": "Scene 1",
+      "title": "Whispers of a Promotion",
+      "tag": "Ambition spark",
+      "body": "During a hallway conversation, you overhear:<br><br><span class=\"highlight\">“I think a senior role is opening soon.”</span><br><br>Your heartbeat shifts — opportunity or threat?",
+      "tip": "Your first instinct reveals your relationship with ambition.",
+      "options": [
+        {
+          "code": "1A",
+          "label": "A",
+          "main": "Ask your manager directly.",
+          "desc": "You seek clarity fast.",
+          "deltas": { "risk": 1, "clarity": 1, "courage": 2, "empathy": 0 }
+        },
+        {
+          "code": "1B",
+          "label": "B",
+          "main": "Stay silent and wait.",
+          "desc": "Avoiding visibility and uncertainty.",
+          "deltas": { "risk": -1, "clarity": 0, "courage": -2, "empathy": 0 }
+        },
+        {
+          "code": "1C",
+          "label": "C",
+          "main": "Assess the competition.",
+          "desc": "You analyze the landscape first.",
+          "deltas": { "risk": 0, "clarity": 2, "courage": 1, "empathy": 1 }
+        },
+        {
+          "code": "1D",
+          "label": "D",
+          "main": "Reject the idea internally.",
+          "desc": "You withdraw from pressure.",
+          "deltas": { "risk": -2, "clarity": -1, "courage": -2, "empathy": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene2",
+      "label": "Scene 2",
+      "title": "Manager Checks In",
+      "tag": "Self-worth test",
+      "body": "Your manager casually asks:<br><br><span class=\"highlight\">“Would you be interested in a senior role?”</span>",
+      "tip": "Identity, confidence, and readiness collide.",
+      "options": [
+        {
+          "code": "2A",
+          "label": "A",
+          "main": "Say yes confidently.",
+          "desc": "You claim ambition openly.",
+          "deltas": { "risk": 2, "clarity": 1, "courage": 2, "empathy": 0 }
+        },
+        {
+          "code": "2B",
+          "label": "B",
+          "main": "Say maybe.",
+          "desc": "You hedge, unsure of worthiness.",
+          "deltas": { "risk": -1, "clarity": 1, "courage": -1, "empathy": 1 }
+        },
+        {
+          "code": "2C",
+          "label": "C",
+          "main": "Ask about expectations.",
+          "desc": "Clarity before positioning.",
+          "deltas": { "risk": 0, "clarity": 3, "courage": 1, "empathy": 1 }
+        },
+        {
+          "code": "2D",
+          "label": "D",
+          "main": "Downplay yourself.",
+          "desc": "Modesty turns into self-erasure.",
+          "deltas": { "risk": -2, "clarity": -1, "courage": -2, "empathy": 1 }
+        }
+      ]
+    },
+    {
+      "id": "scene3",
+      "label": "Scene 3",
+      "title": "The Competitor",
+      "tag": "Conflict & visibility",
+      "body": "A colleague competing for the same role casually badmouths you to others.",
+      "tip": "Your response reveals confidence vs insecurity.",
+      "options": [
+        {
+          "code": "3A",
+          "label": "A",
+          "main": "Confront them directly.",
+          "desc": "You challenge the threat head-on.",
+          "deltas": { "risk": 2, "clarity": 0, "courage": 3, "empathy": -1 }
+        },
+        {
+          "code": "3B",
+          "label": "B",
+          "main": "Ignore it.",
+          "desc": "You choose peace over conflict.",
+          "deltas": { "risk": -1, "clarity": 1, "courage": -1, "empathy": 1 }
+        },
+        {
+          "code": "3C",
+          "label": "C",
+          "main": "Document everything and escalate.",
+          "desc": "You protect fairness strategically.",
+          "deltas": { "risk": 0, "clarity": 3, "courage": 2, "empathy": 0 }
+        },
+        {
+          "code": "3D",
+          "label": "D",
+          "main": "Ask them why they said it.",
+          "desc": "You explore emotional intent.",
+          "deltas": { "risk": 0, "clarity": 1, "courage": 1, "empathy": 2 }
+        }
+      ]
+    },
+    {
+      "id": "scene4",
+      "label": "Scene 4",
+      "title": "The Extra Project",
+      "tag": "Visibility challenge",
+      "body": "Leadership assigns an optional high-visibility project — all eyes are on your reaction.",
+      "tip": "Ambition often shows through extra effort.",
+      "options": [
+        {
+          "code": "4A",
+          "label": "A",
+          "main": "Take it immediately.",
+          "desc": "You seize the chance to shine.",
+          "deltas": { "risk": 2, "clarity": 2, "courage": 2, "empathy": 0 }
+        },
+        {
+          "code": "4B",
+          "label": "B",
+          "main": "Decline politely.",
+          "desc": "Boundaries over ambition.",
+          "deltas": { "risk": -1, "clarity": 1, "courage": 0, "empathy": 1 }
+        },
+        {
+          "code": "4C",
+          "label": "C",
+          "main": "Delegate.",
+          "desc": "You empower others while staying involved.",
+          "deltas": { "risk": 0, "clarity": 1, "courage": 1, "empathy": 2 }
+        },
+        {
+          "code": "4D",
+          "label": "D",
+          "main": "Do half now, half later.",
+          "desc": "Balanced but cautious engagement.",
+          "deltas": { "risk": 0, "clarity": 2, "courage": 1, "empathy": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene5",
+      "label": "Scene 5",
+      "title": "The Vision Test",
+      "tag": "Strategic clarity",
+      "body": "Your manager says:<br><br><span class=\"highlight\">“If you were in the senior role, what direction would you lead?”</span>",
+      "tip": "Your vision signals your leadership potential.",
+      "options": [
+        {
+          "code": "5A",
+          "label": "A",
+          "main": "Give a bold plan.",
+          "desc": "Ambition with courage.",
+          "deltas": { "risk": 3, "clarity": 2, "courage": 3, "empathy": 0 }
+        },
+        {
+          "code": "5B",
+          "label": "B",
+          "main": "Give a safe plan.",
+          "desc": "Dependable but conservative.",
+          "deltas": { "risk": -1, "clarity": 2, "courage": 1, "empathy": 1 }
+        },
+        {
+          "code": "5C",
+          "label": "C",
+          "main": "Ask clarifying questions.",
+          "desc": "Strategy through inquiry.",
+          "deltas": { "risk": 0, "clarity": 3, "courage": 1, "empathy": 1 }
+        },
+        {
+          "code": "5D",
+          "label": "D",
+          "main": "Deflect.",
+          "desc": "You shrink away from visibility.",
+          "deltas": { "risk": -1, "clarity": -1, "courage": -2, "empathy": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene6",
+      "label": "Scene 6",
+      "title": "Shadow You Appears",
+      "tag": "Inner ambition conflict",
+      "body": "A quieter, sharper version of you materializes:<br><br><span class=\"highlight\">“Do you want this, or are you afraid?”</span>",
+      "tip": "You confront ambition, fear, and identity.",
+      "options": [
+        {
+          "code": "6A",
+          "label": "A",
+          "main": "“I want it.”",
+          "desc": "You commit to ambition.",
+          "deltas": { "risk": 2, "clarity": 1, "courage": 2, "empathy": 0 }
+        },
+        {
+          "code": "6B",
+          "label": "B",
+          "main": "“I’m scared.”",
+          "desc": "You express emotional honesty.",
+          "deltas": { "risk": -1, "clarity": 1, "courage": 0, "empathy": 2 }
+        },
+        {
+          "code": "6C",
+          "label": "C",
+          "main": "“Help me see clearly.”",
+          "desc": "You seek clarity and guidance.",
+          "deltas": { "risk": 0, "clarity": 3, "courage": 1, "empathy": 2 }
+        },
+        {
+          "code": "6D",
+          "label": "D",
+          "main": "“I don’t deserve it.”",
+          "desc": "A moment of low self-worth.",
+          "deltas": { "risk": -2, "clarity": -1, "courage": -2, "empathy": 0 }
+        }
+      ]
+    },
+    {
+      "id": "scene7",
+      "label": "Scene 7",
+      "title": "The Final Promotion Decision",
+      "tag": "Ambition identity",
+      "body": "You stand before three doors carved with ambition, worth, and identity:<br><br><strong>SAFE — Withdraw</strong><br><strong>SMART — Accept with terms</strong><br><strong>BRAVE — Fully pursue promotion</strong>",
+      "tip": "Your final choice reveals your personal leadership arc.",
+      "options": [
+        {
+          "code": "7SAFE",
+          "label": "A",
+          "main": "Choose SAFE.",
+          "desc": "You step back for safety and stability.",
+          "deltas": { "risk": -2, "clarity": 0, "courage": -3, "empathy": 1 },
+          "end": true
+        },
+        {
+          "code": "7SMART",
+          "label": "B",
+          "main": "Choose SMART.",
+          "desc": "You pursue growth with boundaries.",
+          "deltas": { "risk": 0, "clarity": 3, "courage": 2, "empathy": 1 },
+          "end": true
+        },
+        {
+          "code": "7BRAVE",
+          "label": "C",
+          "main": "Choose BRAVE.",
+          "desc": "You embrace ambition at full force.",
+          "deltas": { "risk": 3, "clarity": 1, "courage": 4, "empathy": 0 },
+          "end": true
+        }
+      ]
+    }
+  ],
+  "archetypeSystem": {
+    "archetypes": [
+      {
+        "id": "guardian",
+        "label": "The Guardian",
+        "condition": "empathy >= 5 && risk < 0"
+      },
+      {
+        "id": "visionary",
+        "label": "The Visionary",
+        "condition": "risk >= 3 && courage >= 6"
+      },
+      {
+        "id": "strategist",
+        "label": "The Strategist",
+        "condition": "clarity >= 7"
+      },
+      {
+        "id": "avoider",
+        "label": "The Avoider",
+        "condition": "courage < 2 && risk < 0"
+      },
+      {
+        "id": "balanced",
+        "label": "The Balanced Achiever",
+        "condition": "true"
+      }
+    ]
+  },
+  "growthSuggestions": [
+    {
+      "condition": "courage < 3",
+      "text": "You tend to shrink from visibility. Practice stating ambitions clearly and asking directly for opportunities."
+    },
+    {
+      "condition": "risk < 0",
+      "text": "You lean toward safety. Experiment with small calculated risks to grow your confidence."
+    },
+    {
+      "condition": "clarity < 4",
+      "text": "Strategic moves require clear information. Build the habit of asking structured questions before decisions."
+    },
+    {
+      "condition": "empathy > 6",
+      "text": "Your relational focus is strong — ensure it doesn’t come at the cost of self-advocacy."
+    },
+    {
+      "condition": "true",
+      "text": "You show emerging ambition. Keep aligning confidence, clarity, and strategic visibility."
+    }
+  ]
+}
