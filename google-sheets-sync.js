@@ -57,13 +57,8 @@ async function processQueue() {
 }
 
 function enqueue(payload) {
-  fetch(WEB_APP_URL, {
-    method: 'POST',
-    body: JSON.stringify(payload),
-    headers: { 'Content-Type': 'application/json' },
-  }).catch((err) => {
-    console.warn('[Sync] Immediate send failed:', err);
-  });
+  queue.push({ payload, attempt: 0 });
+  processQueue();
 }
 
 // -----------------------------------------------------
