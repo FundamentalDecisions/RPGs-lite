@@ -12,6 +12,12 @@ let isSyncing = false;
 // Exponential backoff base time
 const BASE_DELAY = 1000;
 
+function generateLocalSessionId() {
+  const ts = new Date().toISOString().replace(/[-:.TZ]/g, '').slice(0, 14);
+  const rand = Math.random().toString(36).substring(2, 8).toUpperCase();
+  return `SES-${ts}-${rand}`;
+}
+
 // -----------------------------------------------------
 // INTERNAL HELPERS
 // -----------------------------------------------------
@@ -65,8 +71,13 @@ function enqueue(payload) {
 // PUBLIC API
 // -----------------------------------------------------
 export function initializeSession(meta) {
+  if (!sessionId) {
+    sessionId = generateLocalSessionId();
+  }
+
   const payload = {
     mode: 'SESSION_START',
+    sessionId,
     ...meta,
   };
 
